@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 import Education from './components/Education';
+import './components/styles/Global.css'
 
 function App() {
   return (

@@ -1,0 +1,5 @@
+/* Global rule to ensure correct box-sizing for all elements */
+* {
+    box-sizing: border-box;
+    background-color: #060522;
+  }
