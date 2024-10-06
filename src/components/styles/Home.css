@@ -1,0 +1,44 @@
+/* Styling for About Section */
+.about-section {
+    background-color: #f9f9f9; /* Light background to contrast with header */
+    padding: 50px 0;
+    padding-top: 100px;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto; /* Center the content */
+    text-align: center; /* Center the text */
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; /* Slightly lighter text color for readability */
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .about-text {
+      font-size: 16px;
+    }
+  }
+  

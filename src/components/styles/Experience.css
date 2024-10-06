@@ -1,0 +1,68 @@
+/* Styling for Experience Section */
+.experience-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    padding-top: 100px;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .position {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .company, .duration, .description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .timeline {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: 20px;
+    }
+  
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 20px;
+    }
+  }
+  

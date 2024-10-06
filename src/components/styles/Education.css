@@ -1,0 +1,64 @@
+/* Styling for Education Section */
+.education-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    padding-top: 100px;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  .education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .education-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .education-degree {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .education-institution {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .education-degree {
+      font-size: 20px;
+    }
+  
+    .education-institution {
+      font-size: 14px;
+    }
+  }
+  
