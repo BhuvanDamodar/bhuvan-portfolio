@@ -1,44 +1,97 @@
-/* Styling for About Section */
-.about-section {
-    /* background-color: #f9f9f9; Light background to contrast with header */
-    padding: 50px 0;
-    padding-top: 100px;
+/* home section container */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  height: 100vh; /* Full viewport height */
+  padding-top: 100px; /* Create gap from the fixed header */
+  padding-left: 50px; /* Adjust padding to shift content from left */
+  padding-right: 50px; /* Padding on the right */
+  gap: 20px; /* Increased space between image and text */
+  position: relative;
+}
+
+/* Image container */
+.home-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Move image to the far left */
+  align-items: center;     /* Vertically center the image */
+  position: relative;
+}
+
+/* Style for the image with spotlight effect */
+.home-image {
+  width: 100%;
+  max-width: 350px; /* Maximum width for responsiveness */
+  height: auto;
+  border-radius: 0px;
+  background: transparent;
+  position: relative;
+  margin-left: 40px;
+  z-index: 1;
+  animation: imageGlow 5s infinite alternate; 
+  /* box-shadow: 0px 0px 80px 20px rgba(0, 0, 0, 0.7); Spotlight effect */
+}
+
+/* Description container */
+.home-description {
+  flex: 2; /* Make the description take more space */
+  color: #fff; /* White text */
+  font-family: 'Arial', sans-serif;
+  z-index: 1; /* Ensure it appears over the background effects */ 
+  padding-right: 40px;
+}
+
+.home-description h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff; /* Accent color for heading */
+}
+
+.home-description h1{
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #fff; /* Accent color for heading */
+}
+
+.home-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc; /* Slightly lighter color for the description */
+  text-align: justify;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 1520px) {
+  .home-container {
+    flex-direction: row;
+    height: 80vh; /* Adjust height */
+    padding-top: 120px; /* Reduce padding for smaller screens */
+    gap: 60px;
+    align-items: center;
+  }
+
+  .home-image-container{
+    justify-content: center;
+  }
+
+  .home-image {
+    max-width: 300px; /* Smaller image on mobile */
+    max-width: 300px;
+    margin-left: 0px;
   }
   
-  .container {
-    width: 80%;
-    margin: 0 auto; /* Center the content */
-    text-align: center; /* Center the text */
+
+  .home-description h2 {
+    font-size: 28px;
+  }
+
+  .home-description h1 {
+    font-size: 32px;
   }
   
-  .section-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  .home-description p {
+    font-size: 16px;
   }
-  
-  .about-text {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555; /* Slightly lighter text color for readability */
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 90%;
-    }
-  
-    .section-title {
-      font-size: 28px;
-    }
-  
-    .about-text {
-      font-size: 16px;
-    }
-  }
-  
+}

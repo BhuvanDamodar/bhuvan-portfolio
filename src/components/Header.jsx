@@ -18,7 +18,7 @@ const Header = () => {
     <header>
       <nav className="navbar">
         <div className="logo">
-          <h1><Link to = "about" smooth={true} duration={500}>BHUVAN.</Link></h1>
+          <h1><Link to = "home" smooth={true} duration={500}>BHUVAN.</Link></h1>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -32,8 +32,8 @@ const Header = () => {
         <ul className={`nav-links ${menuOpen ? 'open': ''}`}>
           <li className="close-btn" onClick={closeMenu}>✕</li>
           <li>
-            <button><Link className="link" onClick={closeMenu} to="about" smooth={true} duration={500}>
-              About
+            <button><Link className="link" onClick={closeMenu} to="home" smooth={true} duration={500}>
+              Home
             </Link></button>
           </li>
           <li>

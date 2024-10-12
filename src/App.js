@@ -10,9 +10,9 @@ import './components/styles/Global.css'
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <Home></Home>
+    <div>
+      <Header/>
+      <Home/>      
       <Projects/>
       <Experience/>
       <Education/>
