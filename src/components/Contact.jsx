@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles/Contact.css'
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,10 @@ const Contact = () => {
     mobile: '',
     message: ''
   });
+
+  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const userID = process.env.REACT_APP_EMAILJS_USER_ID;
 
   // State to store error messages
   const [errors, setErrors] = useState({});
@@ -61,6 +66,35 @@ const Contact = () => {
       console.log('Form submitted:', formData);
       // You can proceed with form submission (e.g., sending data to a server)
     }
+
+    // Send email using EmailJS, the email will be sent to your email address as per the template
+    emailjs.send(
+      serviceID,     // Your EmailJS service ID
+      templateID,    // Your EmailJS template ID
+      {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,  // The user's email, sent as a variable but not as the recipient
+        mobile: formData.mobile,
+        message: formData.message
+      },
+      userID       
+    )
+    .then((response) => {
+      console.log('Email sent successfully!', response.status, response.text);
+      // Optionally clear the form after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        mobile: '',
+        message: ''
+      });
+      window.location.reload();
+    })
+    .catch((err) => {
+      console.error('Failed to send email. Error:', err);
+    });
   };
 
   return (
