@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer-section">
       <div className="container">
         <div className="footer-content">
-          <p className="footer-name">Bhuvan Damodar</p>
+          <p className="footer-name">Bhuvan Damodar A</p>
           <p className="footer-contact">
             Phone: +91 8073064074 | Email: bhuvandamodar04@gmail.com
           </p>

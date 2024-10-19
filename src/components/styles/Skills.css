@@ -1,6 +1,5 @@
 /* Styling for Skills Section */
 .skills-section {
-    background-color: #f9f9f9;
     padding: 60px 0;
     padding-top: 100px;
   }
@@ -34,7 +33,7 @@
   .skill-name {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
   }
   

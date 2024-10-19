@@ -1,6 +1,5 @@
 /* Styling for Experience Section */
 .experience-section {
-    background-color: #f9f9f9;
     padding: 60px 0;
     padding-top: 100px;
   }
@@ -13,7 +12,7 @@
   .section-title {
     font-size: 36px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin-bottom: 40px;
     text-transform: uppercase;
     text-align: center;
@@ -42,13 +41,13 @@
   .position {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
   }
   
   .company, .duration, .description {
     font-size: 16px;
-    color: #666;
+    color: #fff;
     line-height: 1.6;
   }
   

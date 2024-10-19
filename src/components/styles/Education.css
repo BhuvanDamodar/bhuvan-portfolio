@@ -1,6 +1,5 @@
 /* Styling for Education Section */
 .education-section {
-    background-color: #f9f9f9;
     padding: 60px 0;
     padding-top: 100px;
   }
@@ -14,7 +13,7 @@
   .section-title {
     font-size: 36px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin-bottom: 40px;
     text-transform: uppercase;
   }
@@ -35,13 +34,13 @@
   .education-degree {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     margin-bottom: 10px;
   }
   
   .education-institution {
     font-size: 16px;
-    color: #777;
+    color: #fff;
   }
   
   @media (max-width: 768px) {

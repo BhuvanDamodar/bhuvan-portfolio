@@ -22,7 +22,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h2>Let’s Work Together!</h2>
+      <h2 className='h2'>Let’s Work Together!</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

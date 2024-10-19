@@ -8,14 +8,20 @@ form {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
+    color: #fff;
   }
   
   button {
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: #fff;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
   }
+
+.h2{
+  color: #fff;
+}
   
