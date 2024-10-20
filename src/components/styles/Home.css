@@ -22,10 +22,10 @@
 
 /* Style for the image with spotlight effect */
 .home-image {
-  width: 100%;
+  width: 50%;
   max-width: 350px; /* Maximum width for responsiveness */
   height: auto;
-  border-radius: 0px;
+  border-radius: 60px;
   background: transparent;
   position: relative;
   margin-left: 40px;
