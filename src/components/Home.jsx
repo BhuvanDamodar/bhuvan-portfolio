@@ -9,13 +9,10 @@ const Home = () => {
         <img src={myPicture} alt="Bhuvan" className="home-image" />
       </div>
       <div className="home-description">
-        <h2>I AM BHUVAN</h2>
-        <h1>Senior Software Developer</h1>
+        <h2>Hi, I’m Bhuvan!</h2>
+        <h1>Crafting Digital Experiences as a Senior Software Developer</h1>
         <p>
-          Hi, I'm Bhuvan. I'm a passionate web developer with experience in React, JavaScript, and more.
-          I enjoy building applications that solve real-world problems and love to explore new technologies.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quidem suscipit natus, incidunt excepturi, in pariatur ipsum a quos voluptatibus quae voluptatem recusandae! Ullam, commodi fugit. Culpa ducimus adipisci modi.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus, nemo illum est rem cupiditate, doloribus dolorem corrupti voluptatum, earum vel eos ipsam aut esse. Natus expedita ipsam velit, alias impedit laudantium maxime provident doloremque. Quis omnis enim sed, consequatur perferendis atque excepturi non blanditiis pariatur est veritatis unde quidem.
+        I’m a Senior Software Developer with deep expertise in Java, data-driven approaches, and modern web technologies such as React and JavaScript. With a strong command of Apache Kafka, I specialize in building scalable, real-time systems that process and manage large volumes of data efficiently. I am passionate about solving complex problems, designing intuitive and seamless user experiences, and delivering robust, high-performing software solutions. My work is driven by a commitment to innovation, utilizing cutting-edge technologies to create impactful applications that meet real-world challenges. Collaboration and adaptability are at the core of my approach, ensuring that I thrive in fast-paced, dynamic environments. Whether it's architecting backend systems, optimizing front-end performance, or integrating data pipelines, I aim to deliver solutions that are not only functional but transformative. I continuously seek opportunities to grow and evolve, staying ahead of trends to create software that empowers users and businesses alike.
         </p>
       </div>
     </div>
