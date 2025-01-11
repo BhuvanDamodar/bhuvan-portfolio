@@ -1,38 +1,82 @@
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    color: #fff;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #fff;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-  }
-
-.h2{
-  color: #fff;
+.contact-section {
+  background-color: #0c0c23;
+  padding: 20px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10vh;
 }
 
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
+.contact-title {
+  background-color: transparent;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.contact-form {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.input-group input {
+  width: 100%;
+}
+
+input, textarea {
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  /* background-color: #14142b; */
+  color: #fff;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #bbb;
+}
+
+button {
+  background-color: #6c63ff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5b53e1;
 }
 
 .error-input {
-  border-color: red;
+  border: 1px solid red;
 }
 
-  
+.error-message {
+  font-size: 12px;
+  color: red;
+  text-align: left;
+  margin-top: -15px;
+}

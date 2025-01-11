@@ -3,14 +3,14 @@ import './styles/Education.css';
 
 const educationData = [
   {
-    degree: 'Master of Science in Computer Science',
-    institution: 'XYZ University',
-    duration: '2022 - Present',
+    degree: 'Bachelor of Science in Computer Science',
+    institution: 'Vidya Vardhaka College of Engineering',
+    duration: '2018 - 2022',
   },
   {
-    degree: 'Bachelor of Technology in Computer Science',
-    institution: 'ABC Institute of Technology',
-    duration: '2018 - 2022',
+    degree: 'Master of Science in Computer Science',
+    institution: 'University of Stuttgart',
+    duration: '2025 - Present',
   }
 ];
 
