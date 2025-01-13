@@ -1,19 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/Home.css';
 import myPicture from '../resources/photos/bhuvan-photo.png';
 
 const Home = () => {
+  const [showStory, setShowStory] = useState(false);
+
+  const handleExploreClick = () => {
+    setShowStory(!showStory);
+  };
+
   return (
-    <div id='home' className="home-container">
+    <div id="home" className="home-container">
       <div className="home-image-container">
         <img src={myPicture} alt="Bhuvan" className="home-image" />
       </div>
       <div className="home-description">
-        <h2>Hi, I’m Bhuvan!</h2>
-        <h1>Crafting Digital Experiences as a Senior Software Developer</h1>
+        <h2>👋 Hello World! I’m Bhuvan, Your Friendly Tech Enthusiast.</h2>
         <p>
-        I’m a Senior Software Developer with deep expertise in Java, data-driven approaches, and modern web technologies such as React and JavaScript. With a strong command of Apache Kafka, I specialize in building scalable, real-time systems that process and manage large volumes of data efficiently. I am passionate about solving complex problems, designing intuitive and seamless user experiences, and delivering robust, high-performing software solutions. My work is driven by a commitment to innovation, utilizing cutting-edge technologies to create impactful applications that meet real-world challenges. Collaboration and adaptability are at the core of my approach, ensuring that I thrive in fast-paced, dynamic environments. Whether it's architecting backend systems, optimizing front-end performance, or integrating data pipelines, I aim to deliver solutions that are not only functional but transformative. I continuously seek opportunities to grow and evolve, staying ahead of trends to create software that empowers users and businesses alike.
+          I build digital dreams, one line of code at a time! From crafting seamless user experiences to engineering robust backends, I thrive on turning tech challenges into elegant solutions. Oh, and when I’m not coding, you might find me brewing ideas or coffee ☕—sometimes both!
         </p>
+        <button className="explore-button" onClick={handleExploreClick}>
+          {showStory ? "Hide My Story" : "Click to Explore"}
+        </button>
+        {showStory && (
+          <div className="mini-bio-story">
+            From Python-powered beginnings in college to designing sleek project setups, 
+            I’ve always found joy in solving problems—fast and efficiently. The suspense? 
+            My journey recently took a surprising turn as I packed my bags and set course 
+            for Germany to pursue a master’s degree! When I’m not coding or setting up my 
+            next project, you’ll probably find me dreaming up creative tech ideas or building 
+            the perfect workspace. Approachable and curious, I love connecting with people as 
+            much as I love debugging code!
+          </div>
+        )}
       </div>
     </div>
   );
