@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: flex-start; /* Align items to the left */
   height: 100vh; /* Full viewport height */
-  padding-top: 100px; /* Create gap from the fixed header */
+  /* padding-top: 100px; Create gap from the fixed header */
   padding-left: 50px; /* Adjust padding to shift content from left */
   padding-right: 50px; /* Padding on the right */
   gap: 20px; /* Increased space between image and text */
@@ -112,7 +112,7 @@
   .home-container {
     flex-direction: row;
     height: 100vh; /* Adjust height */
-    padding-top: 120px; /* Reduce padding for smaller screens */
+    /* padding-top: 120px; Reduce padding for smaller screens */
     gap: 60px;
     align-items: center;
   }
