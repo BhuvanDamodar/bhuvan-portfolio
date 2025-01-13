@@ -27,6 +27,17 @@ const Home = () => {
             From Python-powered 🐍 beginnings in college to mastering Java ☕ in professional projects, I’ve always found joy in solving problems—fast and efficiently. The suspense? My journey recently took a surprising turn as I packed my bags 🧳 and set course for Germany 🇩🇪 to pursue a master’s degree! Beyond the code, I love creating professional setups ⚙️ for my projects—a process that feels as satisfying as seeing a perfect deployment 🚀. Approachable and curious, I enjoy connecting with people 🤝, sharing ideas 💡, and discovering creative ways to tackle challenges.
            </div>
         )}
+
+
+        <div className="button-container">
+          <button
+            className="connect-button"
+            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+          >
+            Let’s Connect!
+          </button>
+        </div>
+
       </div>
     </div>
   );

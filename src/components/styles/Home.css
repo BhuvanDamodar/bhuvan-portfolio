@@ -119,6 +119,37 @@
   }
 }
 
+/* "Beam Me a Message" button */
+.connect-button {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.connect-button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.connect-button:active {
+  transform: scale(1) rotate(0deg);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 
 /* Add responsiveness for smaller screens */
 @media (max-width: 1520px) {
