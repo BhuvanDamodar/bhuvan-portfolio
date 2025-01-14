@@ -152,9 +152,9 @@
 }
 
 /* Add responsiveness for smaller screens */
-@media (max-width: 1520px) {
+@media (max-width: 1200px) {
   .home-container {
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh; /* Adjust height */
     /* padding-top: 120px; Reduce padding for smaller screens */
     gap: 60px;

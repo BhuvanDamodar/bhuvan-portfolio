@@ -1,27 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/Projects.css';
 
 const projectsData = [
   {
     name: 'Histopathologic Multi-Organ Cancer Detection in Lymph Node Tissues',
     description:
-      'Developed a cutting-edge machine learning model to detect metastases in lymph node tissues using histopathologic images, addressing the growing need for faster and more accurate cancer diagnostics.',
+      'A CNN-based solution for accurate lymph node metastases detection in cancer diagnostics.',
     image: '/path/to/image1.jpg',
     category: 'Machine Learning',
+    bulletPoints: [
+      'Developed a cutting-edge machine learning model to detect metastases in lymph node tissues using histopathologic images.',
+      'Created a robust preprocessing pipeline including data cleaning, normalization, and augmentation to handle a dataset of 198,022 images.',
+      'Designed and implemented a Convolutional Neural Network (CNN) architecture achieving high accuracy (AUC in ROC: 0.94) for real-time cancer classification.',
+      'Focused on scalability and precision, enabling the model to address practical challenges in medical imaging applications.',
+    ],
   },
   {
     name: 'UserGoals MERN Application',
     description:
-      'Developed a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application called "UserGoals" to manage user-defined goals with secure authentication using JSON Web Tokens (JWT).',
+      'A MERN stack app for securely managing and tracking user-defined goals.',
     image: '/path/to/image2.jpg',
     category: 'Web Development',
+    bulletPoints: [
+      'Developed a full-stack MERN application called "UserGoals" for managing user-defined goals.',
+      'Implemented secure authentication and authorization using JSON Web Tokens (JWT).',
+      'Built a responsive front-end with React and a RESTful API powered by Node.js and Express.js.',
+      'Enabled users to securely create, update, and track their goals with a seamless user experience.',
+      'Showcased expertise in modern web development practices and building secure, scalable full-stack applications.',
+    ],
   },
   {
     name: 'Crime Management System',
     description:
-      'Built a comprehensive Crime Management System using Java, PHP, MySQL, Xampp Server, and JDBC to streamline crime reporting and case management processes.',
+      'A Java-PHP-based system for efficient crime reporting and case management.',
     image: '/path/to/image3.jpg',
     category: 'Web Development',
+    bulletPoints: [
+      'Built a Crime Management System using Java, PHP, MySQL, Xampp Server, and JDBC.',
+      'Streamlined crime reporting and case management with a user-friendly interface for law enforcement agencies.',
+      'Enabled real-time updates on cases and tracking of crime statistics.',
+      'Designed an optimized database structure for efficient data retrieval and secure management',
+      'Ensured seamless front-end and back-end interaction through JDBC integration.',
+    ],
   },
 ];
 
@@ -29,15 +49,35 @@ const categories = ['All', 'Machine Learning', 'Web Development'];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
 
   const filteredProjects = projectsData.filter(
     (project) =>
       selectedCategory === 'All' || project.category === selectedCategory
   );
 
+  const handleMoreInfoClick = (project) => {
+    setCurrentProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setCurrentProject(null);
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isModalOpen]);
+
   return (
     <section id="projects" className="projects-section">
-      <div className="projects-container">
+      <div className={`projects-container ${isModalOpen ? 'blur-background' : ''}`}>
         <h2 className="section-title">Projects</h2>
         <div className="categories">
           {categories.map((category) => (
@@ -63,14 +103,33 @@ const Projects = () => {
               <h3 className="project-name">{project.name}</h3>
               <p className="project-description">{project.description}</p>
               <div className="project-links">
-                
+                <button onClick={() => handleMoreInfoClick(project)}>
+                  More Info
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+  
+      {isModalOpen && currentProject && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close-button" onClick={handleCloseModal}>
+              &times;
+            </span>
+            <h2>{currentProject.name}</h2>
+            <p className="modal-description">{currentProject.description}</p>
+            <ul className="modal-bullet-points">
+              {currentProject.bulletPoints.map((point, index) => (
+                <li className="modal-list" key={index}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </section>
-  );
+  );  
 };
 
 export default Projects;
