@@ -2,7 +2,6 @@
 
 /* Fixed Header Styling */
 header {
-  /* background-color: #333; */
   padding: 20px 60px !important; /* Adding !important to force the padding */
   position: fixed;
   top: 0;

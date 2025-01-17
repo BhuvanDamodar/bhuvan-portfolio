@@ -1,3 +1,8 @@
+.contact-container{
+  padding-top: 20px;
+}
+
+
 .contact-section {
   background-color: #0c0c23;
   padding: 20px 20px;
@@ -5,7 +10,7 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 .contact-title {

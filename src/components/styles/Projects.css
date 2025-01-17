@@ -1,10 +1,10 @@
   /* Styling for Projects Section */
 .projects-section {
   padding: 60px 0;
-  padding-top: 100px;
 }
 
 .projects-container {
+  padding-top: 50px;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -20,7 +20,7 @@
 }
 
 .categories {
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .category-button {

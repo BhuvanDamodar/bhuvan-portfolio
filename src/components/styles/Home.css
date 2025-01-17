@@ -1,9 +1,11 @@
 /* home section container */
 .home-container {
+  padding-top: 200px;
+  padding-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Align items to the left */
-  height: 100vh; /* Full viewport height */
+  /* height: 100vh; Full viewport height */
   /* padding-top: 100px; Create gap from the fixed header */
   padding-left: 50px; /* Adjust padding to shift content from left */
   padding-right: 50px; /* Padding on the right */
@@ -155,9 +157,9 @@
 @media (max-width: 1200px) {
   .home-container {
     flex-direction: column;
-    height: 100vh; /* Adjust height */
+    /* height: 100vh; Adjust height */
     /* padding-top: 120px; Reduce padding for smaller screens */
-    gap: 60px;
+    gap: 50px;
     align-items: center;
   }
 
