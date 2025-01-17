@@ -62,6 +62,18 @@
   z-index: 2;
   margin: 0 20px;
   overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+/* Smooth hover effect */
+.timeline-icon:hover {
+  transform: scale(1.2); /* Scales the icon slightly for a hover effect */
+}
+
+/* Reset the animation after hover ends */
+.timeline-icon:hover::before {
+  content: '';
+  display: none;
 }
 
 .timeline-image {
@@ -103,6 +115,17 @@
   margin: 0 20px;
 }
 
+/* Keyframes for scale animation (removed unnecessary bounce) */
+@keyframes icon-scale {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   .timeline {
     width: 100%;
@@ -124,15 +147,16 @@
     margin: 0;
     position: absolute;
     transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out; /* Same hover effect for mobile */
   }
 
-  .timeline-card.left .timeline-content{
+  .timeline-card.left .timeline-content {
     margin-left: 80px; /* Space between the icon and the card */
     width: calc(100% - 100px); /* Adjust card width to prevent overflow */
     text-align: left;
   }
 
-  .timeline-card.right .timeline-content{
+  .timeline-card.right .timeline-content {
     margin-right: 20px; /* Space between the icon and the card */
     width: calc(100% - 100px); /* Adjust card width to prevent overflow */
     text-align: left;
@@ -144,5 +168,3 @@
     left: 5px;
   }
 }
-
-
