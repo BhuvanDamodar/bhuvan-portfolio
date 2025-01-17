@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-.experience-section-title{
+.experience-section-title {
   font-size: 36px;
   color: #64ffda;
   text-align: center;
@@ -26,20 +26,15 @@
 
 .timeline-card {
   display: flex;
-  align-items: flex-start;
-  margin: 20px 0;
+  align-items: center; /* Ensures cards are aligned to the centerline */
+  margin: 70px 0;
   position: relative;
 }
 
-.timeline-card.left .timeline-content {
-  margin-right: auto;
-  text-align: right;
-  z-index: 2;
-}
-
+.timeline-card.left .timeline-content,
 .timeline-card.right .timeline-content {
-  margin-left: auto;
-  text-align: left;
+  text-align: left; /* Aligns text to start from the left */
+  z-index: 2;
 }
 
 /* Line and Connector */
@@ -55,8 +50,6 @@
   z-index: 1;
 }
 
-
-
 .timeline-icon {
   background-color: #112240;
   width: 50px;
@@ -68,63 +61,88 @@
   position: relative;
   z-index: 2;
   margin: 0 20px;
-  overflow: hidden; /* Ensures the image stays within the circular boundary */
+  overflow: hidden;
 }
-
 
 .timeline-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image scales and covers the container */
-  border-radius: 50%; /* Keeps the circular shape for the image */
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .timeline-content {
   background-color: #000;
   border-radius: 10px;
   padding: 20px;
-  width: 45%;
+  width: 48%; /* Sets equal width for cards */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-content h3 {
+  background-color: #000;
   font-size: 20px;
   color: #fff;
   margin-bottom: 10px;
-  background-color: #000;
 }
 
 .timeline-content p {
+  background-color: #000;
   font-size: 14px;
   color: #fff;
   line-height: 1.6;
-  background-color: #000;
-  
 }
 
-/* Responsive Design */
+/* Align icon spacing consistently */
+.timeline-card.right {
+  flex-direction: row-reverse;
+}
+
+.timeline-card.right .timeline-icon,
+.timeline-card.left .timeline-icon {
+  margin: 0 20px;
+}
+
 @media (max-width: 768px) {
   .timeline {
     width: 100%;
   }
 
-  .timeline-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .timeline-card.left .timeline-content,
-  .timeline-card.right .timeline-content {
-    text-align: center;
-    margin: 0;
-    width: 90%;
-  }
-
   .timeline::before {
-    left: 20px;
+    left: 50px; /* Position the vertical line */
+  }
+
+  .timeline-card {
+    flex-direction: row; /* Icons and content side by side */
+    align-items: center; /* Align icon and card on the same line */
+    justify-content: flex-start; /* Align everything to the left */
+    position: relative;
+    margin: 40px 0;
   }
 
   .timeline-icon {
-    margin-bottom: 20px;
+    margin: 0;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  .timeline-card.left .timeline-content{
+    margin-left: 80px; /* Space between the icon and the card */
+    width: calc(100% - 100px); /* Adjust card width to prevent overflow */
+    text-align: left;
+  }
+
+  .timeline-card.right .timeline-content{
+    margin-right: 20px; /* Space between the icon and the card */
+    width: calc(100% - 100px); /* Adjust card width to prevent overflow */
+    text-align: left;
+  }
+
+  .timeline-card.left .timeline-icon,
+  .timeline-card.right .timeline-icon {
+    position: absolute;
+    left: 5px;
   }
 }
+
+
