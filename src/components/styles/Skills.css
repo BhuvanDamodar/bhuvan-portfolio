@@ -11,24 +11,6 @@
   text-align: center;
 }
 
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #64ffda;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background-color: #64ffda;
-  margin: 10px auto 0;
-  border-radius: 5px;
-}
 
 /* Grid layout */
 .skills-grid {

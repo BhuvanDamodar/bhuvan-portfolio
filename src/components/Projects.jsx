@@ -28,6 +28,7 @@ const projectsData = [
       'Enabled users to securely create, update, and track their goals with a seamless user experience.',
       'Showcased expertise in modern web development practices and building secure, scalable full-stack applications.',
     ],
+    githubLink: 'https://github.com/BhuvanDamodar/mernapp-userGoals-project',
   },
   {
     name: 'Crime Management System',
@@ -84,9 +85,8 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`category-button ${
-                selectedCategory === category ? 'active' : ''
-              }`}
+              className={`category-button ${selectedCategory === category ? 'active' : ''
+                }`}
             >
               {category}
             </button>
@@ -111,7 +111,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-  
+
       {isModalOpen && currentProject && (
         <div className="modal">
           <div className="modal-content">
@@ -125,11 +125,21 @@ const Projects = () => {
                 <li className="modal-list" key={index}>{point}</li>
               ))}
             </ul>
+            {currentProject.githubLink && (
+              <a
+                href={currentProject.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                View on GitHub
+              </a>
+            )}
           </div>
         </div>
       )}
     </section>
-  );  
+  );
 };
 
 export default Projects;

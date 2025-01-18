@@ -3,3 +3,22 @@
     box-sizing: border-box;
     background-color: #060522;
   }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #64ffda;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }

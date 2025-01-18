@@ -6,16 +6,11 @@
 
 .experience-container {
   padding-top: 50px;
-  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
+  text-align: center;
 }
 
-.section-title {
-  font-size: 36px;
-  color: #64ffda;
-  text-align: center;
-  margin-bottom: 40px;
-}
 
 /* Timeline Styling */
 .timeline {
