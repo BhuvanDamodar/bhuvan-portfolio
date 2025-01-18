@@ -5,25 +5,25 @@ import shiash from '../resources/photos/shiash.jpeg';
 import sparks from '../resources/photos/sparks.png';
 
 const experiences = [
-  {
-    position: 'Senior Software Engineer',
+  { 
+    position: 'Software Engineer',
     company: 'Happiest Minds Technologies',
-    duration: 'August 2022 - Present',
-    description: 'Leading the development of scalable web applications using React and Node.js, focusing on performance and user experience.',
+    duration: 'August 2022 - January 2025',
+    description: 'Built enterprise-grade solutions using Spring Framework, CI/CD, REST APIs, and Kafka Streams.',
     image: hm
   },
   {
     position: 'Software Engineer Intern',
     company: 'Shiash Info Solutions Private Limited',
     duration: 'August 2021 - December 2021',
-    description: 'Designed and maintained client-side applications leveraging Angular and TypeScript, optimizing workflows for business solutions.',
+    description: 'Implemented database connectivity and optimized Java-based solutions for business workflows.',
     image: shiash
   },
   {
     position: 'Data Science Intern',
     company: 'The Sparks Foundation',
     duration: 'November 2020 - December 2020',
-    description: 'Contributed to the development of e-commerce platforms using PHP and MySQL, improving data handling efficiency.',
+    description: 'Developed data visualizations and analytics pipelines using Python and NumPy.',
     image: sparks
   }
 ];
