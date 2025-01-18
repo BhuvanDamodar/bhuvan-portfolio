@@ -24,11 +24,11 @@ const Contact = () => {
   const validateForm = () => {
     let formErrors = {};
     if (!formData.firstName) formErrors.firstName = 'First Name is required';
-    if (!formData.lastName) formErrors.lastName = 'Last Name is required';
+    // if (!formData.lastName) formErrors.lastName = 'Last Name is required';
     if (!formData.email) formErrors.email = 'Email is required';
     else if (!/\S+@\S+\.\S+/.test(formData.email)) formErrors.email = 'Email is invalid';
-    if (!formData.mobile) formErrors.mobile = 'Mobile number is required';
-    else if (!/^\d{10}$/.test(formData.mobile)) formErrors.mobile = 'Mobile number must be 10 digits';
+    // if (!formData.mobile) formErrors.mobile = 'Mobile number is required';
+    // else if (!/^\d{10}$/.test(formData.mobile)) formErrors.mobile = 'Mobile number must be 10 digits';
     if (!formData.message) formErrors.message = 'Message is required';
     return formErrors;
   };
