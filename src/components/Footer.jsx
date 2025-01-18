@@ -11,9 +11,8 @@ const Footer = () => {
             Phone: +91 8073064074 | Email: bhuvandamodar04@gmail.com
           </p>
           <ul className="footer-socials">
-            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="www.linkedin.com/in/bhuvan-damodar-a-657b95179" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/BhuvanDamodar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </div>
         <p className="footer-copyright">
