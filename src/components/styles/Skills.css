@@ -2,79 +2,91 @@
 .skills-section {
   padding: 60px 0;
   padding-top: 100px;
+  color: #fff;
 }
 
-.container {
+.skills-container {
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.section-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
 
+/* Grid layout */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
 }
 
 .skill-card {
-  /* background-color: #1e1e1e; */
+  background: #000;
   color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 150px;
+  padding: 30px;
+  border-radius: 15px;
+  width: 200px;
+  height: 250px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .skill-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
 }
 
+
+.skill-icon-card {
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.background-circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 8;
+}
+
+
 .skill-icon {
+  background: #fff;
   width: 50px;
   height: 50px;
-  margin-bottom: 10px;
-  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .skill-name {
+  background: #000;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .skill-level {
+  background: #000;
   font-size: 16px;
-  color: #007bff;
+  color: #fff
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
-
-  .section-title {
-    font-size: 28px;
+  .skills-grid {
+    gap: 20px;
   }
 
   .skill-card {
-    width: 120px;
-  }
-
-  .skill-icon {
-    width: 40px;
-    height: 40px;
+    width: 150px;
+    height: 220px;
   }
 
   .skill-name {

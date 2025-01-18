@@ -32,34 +32,34 @@ const Header = () => {
         <ul className={`nav-links ${menuOpen ? 'open': ''}`}>
           <li className="close-btn" onClick={closeMenu}>✕</li>
           <li>
-            <button><Link className="link" onClick={closeMenu} to="home" smooth={true} duration={500}>
-              Home
-            </Link></button>
+            <Link className="link" onClick={closeMenu} to="home" smooth={true} duration={500}>
+              <button>Home</button>
+            </Link>
           </li>
           <li>
-          <button><Link className="link" onClick={closeMenu} to="projects" smooth={true} duration={500}>
-              Projects
-            </Link></button>
+          <Link className="link" onClick={closeMenu} to="projects" smooth={true} duration={500}>
+              <button>Projects</button>            
+          </Link>
           </li>
           <li>
-          <button><Link className="link" onClick={closeMenu} to="experience" smooth={true} duration={500}>
-              Experience
-            </Link></button>
+          <Link className="link" onClick={closeMenu} to="experience" smooth={true} duration={500}>
+              <button>Experience</button>
+            </Link>
           </li>
           <li>
-          <button><Link className="link" onClick={closeMenu} to="education" smooth={true} duration={500}>
-              Education
-            </Link></button>
+          <Link className="link" onClick={closeMenu} to="education" smooth={true} duration={500}>
+              <button>Education</button>
+          </Link>
           </li>
           <li>
-          <button><Link className="link" onClick={closeMenu} to="skills" smooth={true} duration={500}>
-              Skills
-            </Link></button>
+          <Link className="link" onClick={closeMenu} to="skills" smooth={true} duration={500}>
+              <button>Skills</button>          
+          </Link>
           </li>
           <li>
-          <button><Link className="link" onClick={closeMenu} to="contact" smooth={true} duration={500}>
-              Contact
-            </Link></button>
+          <Link className="link" onClick={closeMenu} to="contact" smooth={true} duration={500}>
+              <button>Contact</button>           
+          </Link>
           </li>
         </ul>
       </nav>

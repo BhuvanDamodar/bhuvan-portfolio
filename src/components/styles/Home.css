@@ -1,10 +1,12 @@
 /* home section container */
 .home-container {
+  padding-top: 200px;
+  padding-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Align items to the left */
-  height: 100vh; /* Full viewport height */
-  padding-top: 100px; /* Create gap from the fixed header */
+  /* height: 100vh; Full viewport height */
+  /* padding-top: 100px; Create gap from the fixed header */
   padding-left: 50px; /* Adjust padding to shift content from left */
   padding-right: 50px; /* Padding on the right */
   gap: 20px; /* Increased space between image and text */
@@ -31,7 +33,20 @@
   margin-left: 40px;
   z-index: 1;
   animation: imageGlow 5s infinite alternate; 
-  /* box-shadow: 0px 0px 80px 20px rgba(0, 0, 0, 0.7); Spotlight effect */
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5); 
+}
+
+/* Glowing border animation */
+@keyframes imageGlow {
+  0% {
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+  }
 }
 
 /* Description container */
@@ -62,13 +77,89 @@
   text-align: justify;
 }
 
+/* Styling for the explore button */
+.explore-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(110deg, #060522, #3533cd); /* Gradient color */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.explore-button:hover {
+  transform: scale(1.1);
+  background-color: #4a47a3; /* Hover effect */
+}
+
+/* Styling for the mini-bio story */
+.mini-bio-story {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #0c0c23;
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: justify;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* "Beam Me a Message" button */
+.connect-button {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.connect-button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.connect-button:active {
+  transform: scale(1) rotate(0deg);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
 /* Add responsiveness for smaller screens */
-@media (max-width: 1520px) {
+@media (max-width: 1200px) {
   .home-container {
-    flex-direction: row;
-    height: 100vh; /* Adjust height */
-    padding-top: 120px; /* Reduce padding for smaller screens */
-    gap: 60px;
+    flex-direction: column;
+    /* height: 100vh; Adjust height */
+    /* padding-top: 120px; Reduce padding for smaller screens */
+    gap: 50px;
     align-items: center;
   }
 

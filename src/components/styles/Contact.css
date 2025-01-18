@@ -1,3 +1,8 @@
+.contact-container{
+  padding-top: 20px;
+}
+
+
 .contact-section {
   background-color: #0c0c23;
   padding: 20px 20px;
@@ -5,7 +10,7 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 .contact-title {
@@ -56,7 +61,7 @@ input::placeholder, textarea::placeholder {
 }
 
 button {
-  background-color: #6c63ff;
+  background-color: #4a45a3;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -79,4 +84,63 @@ button:hover {
   color: red;
   text-align: left;
   margin-top: -15px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  text-align: center;
+  width: 300px;
+  animation: fadeIn 0.4s ease-out, scaleIn 0.4s ease-out;
+}
+
+/* Close Button */
+.close-modal {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background: #0056b3;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
