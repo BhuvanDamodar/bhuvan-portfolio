@@ -16,9 +16,17 @@
   .section-title::after {
     content: "";
     display: block;
-    width: 70px;
+    width: 0; /* Start with zero width */
     height: 3px;
     background-color: #fff;
     margin: 10px auto 0;
     border-radius: 5px;
+    transition: width 0.5s ease-in-out; /* Smooth growing animation */
   }
+  
+  /* Trigger the animation on hover or when visible */
+  .section-title:hover::after {
+    width: 70px; /* Full width */
+  }
+  
+  
