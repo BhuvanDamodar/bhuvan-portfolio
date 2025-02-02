@@ -45,7 +45,6 @@ input, textarea {
   padding: 10px;
   border: none;
   border-radius: 8px;
-  /* background-color: #14142b; */
   color: #fff;
   font-size: 16px;
   font-family: Arial, sans-serif;
@@ -86,7 +85,6 @@ button:hover {
   margin-top: -15px;
 }
 
-/* Modal Overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -100,7 +98,6 @@ button:hover {
   z-index: 1000;
 }
 
-/* Modal Content */
 .modal-content {
   color: #fff;
   border-radius: 10px;
@@ -110,7 +107,6 @@ button:hover {
   animation: fadeIn 0.4s ease-out, scaleIn 0.4s ease-out;
 }
 
-/* Close Button */
 .close-modal {
   margin-top: 15px;
   padding: 10px 20px;
@@ -126,7 +122,6 @@ button:hover {
 }
 
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;

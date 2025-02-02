@@ -1,4 +1,3 @@
-  /* Styling for Projects Section */
 .projects-section {
   padding: 60px 0;
 }
@@ -101,8 +100,8 @@
 }
 
 .blur-background {
-  filter: blur(5px); /* Add blur effect */
-  pointer-events: none; /* Prevent interaction with blurred content */
+  filter: blur(5px);
+  pointer-events: none; 
 }
 
 .modal-content {
