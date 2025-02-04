@@ -84,7 +84,7 @@
   background: linear-gradient(110deg, #060522, #3533cd)
 }
 
-.modal {
+.projects-modal {
   display: flex;
   color: #fff;
   justify-content: center;
@@ -104,7 +104,7 @@
   pointer-events: none; 
 }
 
-.modal-content {
+.projects-modal-content {
   padding: 20px;
   border-radius: 8px;
   width: 80%;
@@ -121,21 +121,21 @@
   background-color: transparent;
 }
 
-.modal-description{
+.projects-modal-description{
   font-size: 16px;
   color: #fff;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.modal-bullet-points{
+.projects-modal-bullet-points{
   font-size: 16px;
   color: #fff;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.modal-list{
+.projects-modal-list{
   margin: 10px 0;
 }
 

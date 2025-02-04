@@ -117,11 +117,11 @@ const Contact = () => {
         </form>
 
         {isModalVisible && (
-          <div className="modal-overlay">
-            <div className="modal-content">
+          <div className="contact-modal-overlay">
+            <div className="contact-modal-content">
               <h3>Message Sent!</h3>
               <p> I will get back to you soon 😊</p>
-              <button onClick={() => setIsModalVisible(false)} className="close-modal">
+              <button onClick={() => setIsModalVisible(false)} className="contact-close-modal">
                 OK
               </button>
             </div>
