@@ -24,7 +24,7 @@ const Home = () => {
         </button>
         {showStory && (
           <div className="mini-bio-story">
-            From Python-powered beginnings in college to mastering Java in professional projects, I’ve always found joy in solving problems—fast and efficiently. The excitement? I thrive on transforming challenges into opportunities and seeing my ideas come to life 🚀. Beyond the code, I love creating professional setups ⚙️ for my projects—a process that feels as satisfying as nailing the perfect solution. Approachable and curious, I enjoy connecting with people 🤝, sharing ideas 💡, and exploring creative ways to tackle challenges while learning something new every step of the way!
+            From Python-powered beginnings in college to mastering Java in professional projects, I’ve always found joy in solving problems—fast and efficiently. The excitement? I thrive on transforming challenges into opportunities and seeing my ideas come to life 🚀. Beyond the code, I love creating professional setups ⚙️ for my projects — a process that feels as satisfying as nailing the perfect solution. Approachable and curious, I enjoy connecting with people🤝, sharing ideas💡, and exploring creative ways to tackle challenges while learning something new every step of the way!
           </div>
         )}
 

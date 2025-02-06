@@ -1,10 +1,9 @@
 .home-container {
-  margin-top: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 80px 10%; 
   box-sizing: border-box;
 }
@@ -64,7 +63,7 @@
 .home-description p {
   font-size: 18px;
   line-height: 1.6;
-  color: #ccc;
+  color: #fff;
   text-align: justify;
 }
 
@@ -89,13 +88,13 @@
 .mini-bio-story {
   margin-top: 20px;
   padding: 15px;
-  background-color: #0c0c23;
-  color: #ccc;
+  color: #fff;
   font-size: 16px;
   line-height: 1.6;
   border-radius: 10px;
   animation: fadeIn 0.5s ease-in-out;
   text-align: justify;
+  font-family: 'Arial', sans-serif;
 }
 
 @keyframes fadeIn {
@@ -142,7 +141,7 @@
 
 @media (max-width: 1200px) {
   .home-container {
-    margin-top: 15vh;
+    padding-top: 22vh;
     flex-direction: column;
     gap: 50px;
     align-items: center;
