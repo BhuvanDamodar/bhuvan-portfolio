@@ -4,15 +4,15 @@ import { FaGraduationCap } from "react-icons/fa";
 
 const educationData = [
   {
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor's Degree in Computer Science",
     institution: "Vidya Vardhaka College of Engineering",
     duration: "2018 - 2022",
   },
-  {
-    degree: "Master of Science in Computer Science",
-    institution: "University of Stuttgart",
-    duration: "2025 - Present",
-  },
+  // {
+  //   degree: "Master of Science in Computer Science",
+  //   institution: "University of Stuttgart",
+  //   duration: "2025 - Present",
+  // },
 ];
 
 const Education = () => {
