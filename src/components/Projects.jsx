@@ -113,16 +113,16 @@ const Projects = () => {
       </div>
 
       {isModalOpen && currentProject && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="projects-modal">
+          <div className="projects-modal-content">
             <span className="close-button" onClick={handleCloseModal}>
               &times;
             </span>
             <h2>{currentProject.name}</h2>
-            <p className="modal-description">{currentProject.description}</p>
-            <ul className="modal-bullet-points">
+            <p className="projects-modal-description">{currentProject.description}</p>
+            <ul className="projects-modal-bullet-points">
               {currentProject.bulletPoints.map((point, index) => (
-                <li className="modal-list" key={index}>{point}</li>
+                <li className="projects-modal-list" key={index}>{point}</li>
               ))}
             </ul>
             {currentProject.githubLink && (

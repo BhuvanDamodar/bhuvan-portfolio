@@ -53,7 +53,7 @@ const Contact = () => {
         )
         .then(() => {
           setFormData({ firstName: '', lastName: '', email: '', mobile: '', message: '' });
-          setIsModalVisible(true); // Show the success modal
+          setIsModalVisible(true); 
         })
         .catch((err) => console.error('Failed to send email:', err));
     }
@@ -116,13 +116,12 @@ const Contact = () => {
           <button type="submit" className="send-button">Send Message</button>
         </form>
 
-        {/* Modal Section */}
         {isModalVisible && (
-          <div className="modal-overlay">
-            <div className="modal-content">
+          <div className="contact-modal-overlay">
+            <div className="contact-modal-content">
               <h3>Message Sent!</h3>
               <p> I will get back to you soon 😊</p>
-              <button onClick={() => setIsModalVisible(false)} className="close-modal">
+              <button onClick={() => setIsModalVisible(false)} className="contact-close-modal">
                 OK
               </button>
             </div>

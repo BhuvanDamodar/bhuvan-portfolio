@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
-/* Fixed Header Styling */
 header {
-  padding: 20px 60px !important; /* Adding !important to force the padding */
+  padding: 20px 60px !important; 
   position: fixed;
   top: 0;
   left: 0;
@@ -11,18 +10,16 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar setup */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* max-width: px; */
   margin: 0 auto;
 }
 
-/* Move logo and nav links to left/right */
+
 .logo {
-  margin-right: auto !important; /* Ensure logo is aligned to the left */
+  margin-right: auto !important; 
 }
 
 .logo h1 {
@@ -33,29 +30,20 @@ header {
   cursor:pointer;
 }
 
-/* .logo h1 span {
-  color: #007bff;
-} */
 
-/* Navigation Links Styling */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 14px;
-  margin-left: auto !important; /* Push nav links to the right */
+  margin-left: auto !important; 
   transition: transform 0.3 ease;
 }
 
-
-
-/* Side menu styles */
 .nav-links.open {
   position: fixed;
   top: 0;
   right: 0;
   width: 210px;
-  /* height: 100vh; */
-  /* background-color: transparent; */
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -64,12 +52,10 @@ header {
   z-index: 999;
 }
 
-/* Mobile-specific hidden state (off-screen by default) */
 .nav-links {
   transform: translateX(100%);
 }
 
-/* Close button styling inside side menu */
 .close-btn {
   font-size: 30px;
   color: #fff;
@@ -78,7 +64,6 @@ header {
   margin: 20px;
 }
 
-/* Base button style */
 .nav-links button {
   background-color: transparent;
   color: #fff;
@@ -93,18 +78,15 @@ header {
   background-color: transparent;
 }
 
-/* Hover effect for buttons */
-.nav-links button:hover {
-  
-  background: linear-gradient(110deg, #060522, #3533cd); /* Darker Blue Gradient */
+
+.nav-links button:hover {  
+  background: linear-gradient(110deg, #060522, #3533cd);
   color: #fff;
   font-weight: bold;
   border-radius: 50px;
-  
-
 }
 
-/* Hamburger icon for mobile */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -119,14 +101,14 @@ header {
   transition: 0.3s;
 }
 
-/* Mobile-specific styles */
+
 @media (max-width: 1020px) {
   .nav-links {
-    display: none; /* Hide the links by default on small screens */
+    display: none; 
   }
 
   .hamburger {
-    display: flex; /* Show hamburger only on small screens */
+    display: flex; 
   }
 
   .nav-links.open {
@@ -140,11 +122,10 @@ header {
   }
 }
 
-/* Show the nav-links on larger screens (above 768px) */
 @media (min-width: 1020px) {
   .nav-links {
-    display: flex; /* Make sure links are displayed */
-    transform: translateX(0); /* Reset transform to visible */
+    display: flex; 
+    transform: translateX(0);
   }
 
   .close-btn {
@@ -152,6 +133,6 @@ header {
   }
 
   .hamburger {
-    display: none; /* Hide hamburger menu on larger screens */
+    display: none;
   }
 }

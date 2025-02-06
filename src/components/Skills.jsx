@@ -2,29 +2,28 @@ import React from "react";
 import "./styles/Skills.css";
 
 const skillsData = [
-  { skill: "Java", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/java.svg", level: 80 },
-  { skill: "Node.js", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/nodedotjs.svg", level: 85 },
-  { skill: "MongoDB", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/mongodb.svg", level: 75 },
-  { skill: "Python", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/python.svg", level: 90 },
-  { skill: "ReactJS", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/react.svg", level: 95 },
-  { skill: "MySQL", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/mysql.svg", level: 70 },
-  { skill: "Git", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/git.svg", level: 85 },
-  { skill: "DevOps", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/azuredevops.svg", level: 80 },
+  { skill: "Java", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/java.svg", level: 90 },
+  { skill: "Python", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/python.svg", level: 85 },
+  { skill: "REST APIs", icon: "https://img.icons8.com/?size=100&id=21888&format=png&color=000000", level: 90 }, 
   { skill: "Spring Framework", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/spring.svg", level: 85 },
-  { skill: "Apache Kafka", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachekafka.svg", level: 75 },
+  { skill: "JWT", icon: "https://cdn.jsdelivr.net/npm/simple-icons@14.5.0/icons/springsecurity.svg", level: 85 }, 
+  { skill: "Debugging", icon: "https://img.icons8.com/?size=100&id=nYG0srphf7zy&format=png&color=000000", level: 90 }, 
+  { skill: "Apache Kafka", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/apachekafka.svg", level: 80 },
   { skill: "Microsoft SQL Server", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/microsoftsqlserver.svg", level: 85 },
-  { skill: "ExpressJS", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/express.svg", level: 85 },
-  { skill: "Debugging", icon: "", level: 80 }, // Custom icon can be added
+  { skill: "DevOps", icon: "https://img.icons8.com/?size=100&id=9VkgHjEOTadU&format=png&color=000000", level: 75 },
   { skill: "CI/CD", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/githubactions.svg", level: 75 },
-  { skill: "Scrum", icon: "", level: 70 }, // Custom icon can be added
-  { skill: "Communication", icon: "", level: 90 }, // Custom icon can be added
-  { skill: "JWT", icon: "", level: 75 }, // Custom icon can be added
-  { skill: "REST APIs", icon: "", level: 85 }, // Custom icon can be added
+  { skill: "MySQL", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/mysql.svg", level: 80 },
+  { skill: "Node.js", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/nodedotjs.svg", level: 80 },
+  { skill: "ExpressJS", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/express.svg", level: 80 },
+  { skill: "ReactJS", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/react.svg", level: 80 },
+  { skill: "MongoDB", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/mongodb.svg", level: 75 },
+  { skill: "Git", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/git.svg", level: 95 }, 
+  { skill: "Agile Methodologies", icon: "https://img.icons8.com/ios/50/sprint-iteration.png", level: 80 }, 
+  { skill: "Communication", icon: "https://img.icons8.com/?size=100&id=54385&format=png&color=000000", level: 90 }, 
   { skill: "Machine Learning", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/tensorflow.svg", level: 70 },
-  { skill: "Convolutional Neural Networks", icon: "", level: 70 }, // Custom icon can be added
-  { skill: "Image Processing", icon: "", level: 70 }, // Custom icon can be added
+  { skill: "Convolutional Neural Networks", icon: "https://img.icons8.com/?size=100&id=61864&format=png&color=000000", level: 70 }, 
+  { skill: "Image Processing", icon: "https://img.icons8.com/?size=100&id=mEdT3H1rX7sc&format=png&color=000000", level: 70 }, 
   { skill: "Datadog", icon: "https://cdn.jsdelivr.net/npm/simple-icons/icons/datadog.svg", level: 75 },
-  { skill: "Agile Methodologies", icon: "", level: 80 }, // Custom icon can be added
 ];
 
 const Skills = () => {
