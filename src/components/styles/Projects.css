@@ -1,9 +1,11 @@
 .projects-section {
-  padding: 60px 0;
+  clear: both;
 }
 
 .projects-container {
-  padding-top: 50px;
+  position: relative;
+  padding-top: 100px;
+  margin-top: 100px;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -80,8 +82,8 @@
   background-color: #000;
 }
 
-.project-links button{
-  background: linear-gradient(110deg, #060522, #3533cd)
+.project-links button {
+  background: linear-gradient(110deg, #060522, #3533cd);
 }
 
 .projects-modal {
@@ -172,4 +174,3 @@
       font-size: 14px;
     }
   }
-  
