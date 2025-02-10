@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './styles/Projects.css';
+import image1 from '../resources/photos/proj1.jpeg';
 
 const projectsData = [
   {
     name: 'Histopathologic Multi-Organ Cancer Detection in Lymph Node Tissues',
     description:
       'A CNN-based solution for accurate lymph node metastases detection in cancer diagnostics.',
-    image: '/path/to/image1.jpg',
+    image: image1,
     category: 'Machine Learning',
     bulletPoints: [
       'Developed a cutting-edge machine learning model to detect metastases in lymph node tissues using histopathologic images.',
