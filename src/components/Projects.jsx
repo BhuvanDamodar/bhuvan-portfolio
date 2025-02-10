@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './styles/Projects.css';
+import image1 from '../resources/photos/proj1.jpeg';
+import image2 from '../resources/photos/proj2.jpeg';
+import image3 from '../resources/photos/proj3.jpeg';
 
 const projectsData = [
   {
     name: 'Histopathologic Multi-Organ Cancer Detection in Lymph Node Tissues',
     description:
       'A CNN-based solution for accurate lymph node metastases detection in cancer diagnostics.',
-    image: '/path/to/image1.jpg',
+    image: image1,
     category: 'Machine Learning',
     bulletPoints: [
       'Developed a cutting-edge machine learning model to detect metastases in lymph node tissues using histopathologic images.',
@@ -19,7 +22,7 @@ const projectsData = [
     name: 'UserGoals MERN Application',
     description:
       'A MERN stack app for securely managing and tracking user-defined goals.',
-    image: '/path/to/image2.jpg',
+    image: image2,
     category: 'Web Development',
     bulletPoints: [
       'Developed a full-stack MERN application called "UserGoals" for managing user-defined goals.',
@@ -34,7 +37,7 @@ const projectsData = [
     name: 'Crime Management System',
     description:
       'A Java-PHP-based system for efficient crime reporting and case management.',
-    image: '/path/to/image3.jpg',
+    image: image3,
     category: 'Web Development',
     bulletPoints: [
       'Built a Crime Management System using Java, PHP, MySQL, Xampp Server, and JDBC.',
