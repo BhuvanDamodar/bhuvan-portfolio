@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './styles/Projects.css';
 import image1 from '../resources/photos/proj1.jpeg';
 import image2 from '../resources/photos/proj2.jpeg';
@@ -19,9 +19,9 @@ const projectsData = [
     ],
   },
   {
-    name: 'UserGoals MERN Application',
+    name: 'UserGoals MERN Web Application',
     description:
-      'A MERN stack app for securely managing and tracking user-defined goals.',
+      'A MERN stack web app for securely managing and tracking user-defined goals.',
     image: image2,
     category: 'Web Development',
     bulletPoints: [
@@ -55,6 +55,7 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
+  const modalRef = useRef(null);
 
   const filteredProjects = projectsData.filter(
     (project) =>
@@ -72,11 +73,21 @@ const Projects = () => {
   };
 
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        handleCloseModal();
+      }
+    };
+
     if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
+      document.addEventListener('mousedown', handleClickOutside);
     } else {
-      document.body.style.overflow = 'auto';
+      document.removeEventListener('mousedown', handleClickOutside);
     }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, [isModalOpen]);
 
   return (
@@ -88,8 +99,7 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`category-button ${selectedCategory === category ? 'active' : ''
-                }`}
+              className={`category-button ${selectedCategory === category ? 'active' : ''}`}
             >
               {category}
             </button>
@@ -117,7 +127,7 @@ const Projects = () => {
 
       {isModalOpen && currentProject && (
         <div className="projects-modal">
-          <div className="projects-modal-content">
+          <div className="projects-modal-content" ref={modalRef}>
             <span className="close-button" onClick={handleCloseModal}>
               &times;
             </span>
