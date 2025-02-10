@@ -9,7 +9,6 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   }
 
-  // Function to close the menu when a link is clicked
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -28,7 +27,6 @@ const Header = () => {
           <span className="bar"></span>
         </div>
 
-        {/* side menu */}
         <ul className={`nav-links ${menuOpen ? 'open': ''}`}>
           <li className="close-btn" onClick={closeMenu}>✕</li>
           <li>
