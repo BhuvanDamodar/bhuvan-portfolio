@@ -26,9 +26,19 @@
 }
 
 .footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 16px;
-  margin-bottom: 20px;
-  background-color: black;
+  color: #fff;
+  margin-bottom: 0%;
+  text-decoration: none;
+}
+
+.footer-contact svg {
+  width: 20px;
+  height: 20px;
+  color: #fff;
 }
 
 .footer-socials {

@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/Footer.css';
+import { FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
           <p className="footer-name">Bhuvan Damodar Anand</p>
           <p className="footer-contact">
-            Phone: +91 8073064074 | Email: bhuvandamodar04@gmail.com
+            <FaEnvelope/> bhuvandamodar04@gmail.com
           </p>
           <ul className="footer-socials">
             <li><a href="https://www.linkedin.com/in/bhuvan-damodar-a-657b95179" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
