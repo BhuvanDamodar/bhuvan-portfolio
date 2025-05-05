@@ -81,6 +81,12 @@
   color: #fff
 }
 
+.education-place {
+  background: #000;
+  font-size: 14px;
+  color: #fff
+}
+
 .education-card::before {
   content: "";
   position: absolute;
@@ -121,6 +127,10 @@
   }
 
   .education-duration {
+    font-size: 12px;
+  }
+
+  .education-place {
     font-size: 12px;
   }
 }
