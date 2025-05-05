@@ -7,11 +7,13 @@ const educationData = [
     degree: "Bachelor of Engineering in Computer Science",
     institution: "Vidya Vardhaka College of Engineering",
     duration: "2018 - 2022",
+    place: "Mysore, India",
   },
   {
     degree: "Master of Science in Computer Science",
     institution: "University of Stuttgart",
     duration: "2025 - Present",
+    place: "Stuttgart, Germany",
   },
 ];
 
@@ -29,6 +31,7 @@ const Education = () => {
               <div className="education-details">
                 <h3 className="education-degree">{education.degree}</h3>
                 <p className="education-institution">{education.institution}</p>
+                <p className="education-place">{education.place}</p>
                 <p className="education-duration">{education.duration}</p>
               </div>
             </div>
