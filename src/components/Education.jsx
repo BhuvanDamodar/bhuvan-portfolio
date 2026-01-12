@@ -4,16 +4,16 @@ import { FaGraduationCap } from "react-icons/fa";
 
 const educationData = [
   {
-    degree: "Bachelor of Engineering in Computer Science",
-    institution: "Vidya Vardhaka College of Engineering",
-    duration: "2018 - 2022",
-    place: "Mysore, India",
-  },
-  {
     degree: "Master of Science in Computer Science",
     institution: "University of Stuttgart",
     duration: "2025 - Present",
     place: "Stuttgart, Germany",
+  },
+  {
+    degree: "Bachelor of Engineering in Computer Science",
+    institution: "Vidya Vardhaka College of Engineering",
+    duration: "2018 - 2022",
+    place: "Mysore, India",
   },
 ];
 
