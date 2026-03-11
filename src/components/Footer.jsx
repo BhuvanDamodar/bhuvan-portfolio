@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
           <p className="footer-name">Bhuvan Damodar Anand</p>
           <p className="footer-contact">
-            <FaEnvelope/> bhuvandamodar04@gmail.com
+            <FaEnvelope/> <a href="mailto:bhuvandamodar04@gmail.com" target="_blank" rel="noopener noreferrer">bhuvandamodar04@gmail.com</a>
           </p>
           <ul className="footer-socials">
             <li><a href="https://www.linkedin.com/in/bhuvan-damodar-anand-657b95179" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
