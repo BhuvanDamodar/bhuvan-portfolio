@@ -1,15 +1,23 @@
 import React from 'react';
 import './styles/Experience.css';
+import mb from '../resources/photos/mercedes-benz.jpg';
 import hm from '../resources/photos/hm.png';
 import shiash from '../resources/photos/shiash.jpeg';
 import sparks from '../resources/photos/sparks.png';
 
 const experiences = [
   { 
-    position: 'Software Engineer',
+    position: 'Working Student - Future Digital Engineering',
+    company: 'Mercedes Benz AG',
+    duration: 'February 2026 - Present',
+    description: 'Contributing to the Future Digital Engineering team at Mercedes‑Benz by developing Python-based services that power internal GUI tools and enhance engineering workflows.',
+    image: mb
+  },
+  { 
+    position: 'Software Engineer → Senior Software Engineer',
     company: 'Happiest Minds Technologies',
     duration: 'August 2022 - January 2025',
-    description: 'Built enterprise-grade solutions using Spring Framework, CI/CD, REST APIs, and Kafka Streams.',
+    description: 'Started as a Software Engineer and later promoted to Senior Software Engineer, building enterprise-grade solutions using Spring Framework, CI/CD, REST APIs, and Kafka Streams.',
     image: hm
   },
   {

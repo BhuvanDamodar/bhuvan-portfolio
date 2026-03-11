@@ -41,6 +41,11 @@
   color: #fff;
 }
 
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .footer-socials {
   list-style: none;
   padding: 0;
