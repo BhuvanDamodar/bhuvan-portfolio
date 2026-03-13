@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles/Home.css';
-import myPicture from '../resources/photos/bhuvan-photo.png';
+import myPicture from '../resources/photos/bhuvan_photo.png';
 
 const Home = () => {
   const [showStory, setShowStory] = useState(false);
