@@ -69,7 +69,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="contact-container">
-      <section className="contact-section">
+      <section className="contact-section glass-card">
         <h2 className="contact-title">Let’s Work Together!</h2>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="input-group">

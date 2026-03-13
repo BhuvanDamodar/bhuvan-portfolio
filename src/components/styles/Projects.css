@@ -16,19 +16,29 @@
 }
 
 .category-button {
-  background-color: #333;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
   padding: 10px 20px;
   margin: 5px;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.category-button.active,
 .category-button:hover {
-  background-color: #555;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-button.active {
+  background: linear-gradient(110deg, rgba(6, 5, 34, 0.8), rgba(53, 51, 205, 0.6));
+  border-color: rgba(53, 51, 205, 0.5);
+  box-shadow: 0 4px 20px rgba(53, 51, 205, 0.25);
 }
 
 .projects-grid {
@@ -38,10 +48,7 @@
 }
 
 .project-card {
-  background-color: #000;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   text-align: left;
 }
@@ -56,7 +63,6 @@
   height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: #000;
 }
 
 .project-name {
@@ -64,21 +70,18 @@
   font-weight: bold;
   color: #fff;
   margin-bottom: 10px;
-  background-color: #000;
 }
 
 .project-description {
   font-size: 16px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: 20px;
-  background-color: #000;
 }
 
 .project-links {
   display: flex;
   justify-content: space-between;
-  background-color: #000;
 }
 
 .project-links button {
@@ -106,11 +109,16 @@
 }
 
 .projects-modal-content {
-  padding: 20px;
-  border-radius: 8px;
+  background: rgba(10, 10, 30, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 16px;
   width: 80%;
   max-width: 780px;
   position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .close-button {
