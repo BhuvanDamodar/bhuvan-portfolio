@@ -1,25 +1,24 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=36&duration=3000&pause=1000&color=6C63FF&center=true&vCenter=true&width=600&lines=Bhuvan+Damodar;Software+Engineer+%7C+Full-Stack+Developer;Building+Digital+Experiences" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=36&duration=3000&pause=1000&color=6C63FF&center=true&vCenter=true&width=600&lines=Bhuvan+Damodar+Anand;Software+Engineer;AI/ML+Enthusiast" alt="Typing SVG" />
 </p>
 
 <p align="center">
   <a href="#-features"><img src="https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=white" /></a>
   <a href="#-tech-stack"><img src="https://img.shields.io/badge/Framer_Motion-11.18-FF0050?style=for-the-badge&logo=framer&logoColor=white" /></a>
   <a href="#-deployment"><img src="https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-  <a href="#-license"><img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" /></a>
 </p>
 
 ---
 
-## 🚀 About
+## About
 
-A modern, single-page portfolio website built with **React 18** — showcasing my projects, professional experience, education, and technical skills. The interface features a **glassmorphism** design system, smooth **Framer Motion** animations, and a fully functional **EmailJS**-powered contact form — all wrapped in a responsive layout that looks great on any device.
+A modern, single-page portfolio website built with **React 18** — showcasing my projects, professional experience, education, and technical skills. The interface features a **glassmorphism** design system, smooth **Framer Motion** animations, and a fully functional **EmailJS**-powered contact form - all wrapped in a responsive layout that looks great on any device.
 
 > **Live Site →** https://bhuvandamodar-portfolio.vercel.app
 
 ---
 
-## ✨ Features
+## Features
 
 | Section | Highlights |
 |---------|-----------|
@@ -86,7 +85,7 @@ bhuvan-portfolio/
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -138,15 +137,8 @@ This project is optimized for **Vercel** (one-click deploy):
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BhuvanDamodar/bhuvan-portfolio)
 
-> **Note:** Remember to add your `.env` variables in the Vercel project settings under *Environment Variables*.
-
 ---
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
 
 <p align="center">
   <sub>Designed & built by <strong>Bhuvan Damodar Anand</strong></sub>
