@@ -12,7 +12,7 @@
 
 ## About
 
-A modern, single-page portfolio website built with **React 18** — showcasing my projects, professional experience, education, and technical skills. The interface features a **glassmorphism** design system, smooth **Framer Motion** animations, and a fully functional **EmailJS**-powered contact form - all wrapped in a responsive layout that looks great on any device.
+A modern, single-page portfolio website built with **React 18** - showcasing my projects, professional experience, education, and technical skills. The interface features a **glassmorphism** design system, smooth **Framer Motion** animations, and a fully functional **EmailJS**-powered contact form - all wrapped in a responsive layout that looks great on any device.
 
 > **Live Site →** https://bhuvandamodar-portfolio.vercel.app
 
@@ -32,10 +32,10 @@ A modern, single-page portfolio website built with **React 18** — showcasing m
 
 ### Design & UX
 
-- 🎨 **Glassmorphism UI** — frosted-glass card effect across all sections
-- 🎞️ **Framer Motion Animations** — fade-ins, scale transitions, hover/tap micro-interactions
-- 📱 **Fully Responsive** — optimized for mobile, tablet, and desktop viewports
-- 🔤 **Google Fonts** — clean typography using Open Sans
+- 🎨 **Glassmorphism UI** - frosted-glass card effect across all sections
+- 🎞️ **Framer Motion Animations** - fade-ins, scale transitions, hover/tap micro-interactions
+- 📱 **Fully Responsive** - optimized for mobile, tablet, and desktop viewports
+- 🔤 **Google Fonts** - clean typography using Open Sans
 
 ---
 
@@ -63,7 +63,7 @@ bhuvan-portfolio/
 │   ├── favicon.ico
 │   └── manifest.json
 ├── src/
-│   ├── App.js                # Root component — section composition
+│   ├── App.js                # Root component - section composition
 │   ├── index.js              # React DOM entry point
 │   ├── index.css             # Global reset & base styles
 │   ├── components/

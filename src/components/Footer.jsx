@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/Footer.css';
-import { FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -12,8 +12,16 @@ const Footer = () => {
             <FaEnvelope/> <a href="mailto:bhuvandamodar04@gmail.com" target="_blank" rel="noopener noreferrer">bhuvandamodar04@gmail.com</a>
           </p>
           <ul className="footer-socials">
-            <li><a href="https://www.linkedin.com/in/bhuvan-damodar-anand-657b95179" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://github.com/BhuvanDamodar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/bhuvan-damodar-anand-657b95179" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin size={26} />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/BhuvanDamodar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub size={26} />
+              </a>
+            </li>
           </ul>
         </div>
         <p className="footer-copyright">
