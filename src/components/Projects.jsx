@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import './styles/Projects.css';
 import image1 from '../resources/photos/proj1.jpeg';
 import image2 from '../resources/photos/proj2.jpeg';
@@ -73,6 +74,12 @@ const Projects = () => {
   };
 
   useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         handleCloseModal();
@@ -87,6 +94,7 @@ const Projects = () => {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = '';
     };
   }, [isModalOpen]);
 
@@ -107,7 +115,13 @@ const Projects = () => {
         </div>
         <div className="projects-grid">
           {filteredProjects.map((project, index) => (
-            <div className="project-card" key={index}>
+            <motion.div 
+              className="project-card glass-card" 
+              key={project.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25, delay: index * 0.05 }}
+            >
               <img
                 src={project.image}
                 alt={project.name}
@@ -120,7 +134,7 @@ const Projects = () => {
                   More Info
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

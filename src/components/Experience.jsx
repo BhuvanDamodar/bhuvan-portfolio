@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './styles/Experience.css';
 import mb from '../resources/photos/mercedes-benz.jpg';
 import hm from '../resources/photos/hm.png';
@@ -43,20 +44,24 @@ const Experience = () => {
         <h2 className="section-title">Experience</h2>
         <div className="timeline">
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               className={`timeline-card ${index % 2 === 0 ? 'left' : 'right'}`}
               key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
             >
               <div className="timeline-icon">
                 <img src={exp.image} alt={`${exp.position} icon`} className="timeline-image" />
               </div>
-              <div className="timeline-content">
+              <div className="timeline-content glass-card">
                 <h3 className="position">{exp.position}</h3>
                 <p className="company">{exp.company}</p>
                 <p className="duration">{exp.duration}</p>
                 <p className="description">{exp.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

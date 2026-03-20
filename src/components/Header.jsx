@@ -30,34 +30,34 @@ const Header = () => {
         <ul className={`nav-links ${menuOpen ? 'open': ''}`}>
           <li className="close-btn" onClick={closeMenu}>✕</li>
           <li>
-            <Link className="link" onClick={closeMenu} to="home" smooth={true} duration={500}>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="home" smooth={true} duration={500}>
               <button>Home</button>
             </Link>
           </li>
           <li>
-          <Link className="link" onClick={closeMenu} to="projects" smooth={true} duration={500}>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="projects" smooth={true} duration={500}>
               <button>Projects</button>            
-          </Link>
+            </Link>
           </li>
           <li>
-          <Link className="link" onClick={closeMenu} to="experience" smooth={true} duration={500}>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="experience" smooth={true} duration={500}>
               <button>Experience</button>
             </Link>
           </li>
           <li>
-          <Link className="link" onClick={closeMenu} to="education" smooth={true} duration={500}>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="education" smooth={true} duration={500}>
               <button>Education</button>
-          </Link>
+            </Link>
           </li>
           <li>
-          <Link className="link" onClick={closeMenu} to="skills" smooth={true} duration={500}>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="skills" smooth={true} duration={500}>
               <button>Skills</button>          
-          </Link>
+            </Link>
           </li>
           <li>
-          <Link className="link" onClick={closeMenu} to="contact" smooth={true} duration={500}>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="contact" smooth={true} duration={500}>
               <button>Contact</button>           
-          </Link>
+            </Link>
           </li>
         </ul>
       </nav>

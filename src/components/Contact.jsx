@@ -69,7 +69,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="contact-container">
-      <section className="contact-section">
+      <section className="contact-section glass-card">
         <h2 className="contact-title">Let’s Work Together!</h2>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="input-group">
@@ -115,19 +115,19 @@ const Contact = () => {
           />
           <button type="submit" className="send-button">Send Message</button>
         </form>
-
-        {isModalVisible && (
-          <div className="contact-modal-overlay">
-            <div className="contact-modal-content">
-              <h3>Message Sent!</h3>
-              <p> I will get back to you soon 😊</p>
-              <button onClick={() => setIsModalVisible(false)} className="contact-close-modal">
-                OK
-              </button>
-            </div>
-          </div>
-        )}
       </section>
+
+      {isModalVisible && (
+        <div className="contact-modal-overlay">
+          <div className="contact-modal-content glass-card">
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out! I will get back to you as soon as possible.</p>
+            <button onClick={() => setIsModalVisible(false)} className="contact-close-modal">
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

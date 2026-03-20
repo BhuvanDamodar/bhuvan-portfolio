@@ -24,7 +24,7 @@ const Education = () => {
         <h2 className="section-title">Education</h2>
         <div className="education-grid">
           {educationData.map((education, index) => (
-            <div className="education-card" key={index}>
+            <div className="education-card glass-card" key={index}>
               <div className="education-icon-container">
                 <FaGraduationCap className="education-icon" />
               </div>

@@ -1,10 +1,9 @@
 .education-section {
-  padding: 60px 0px;
+  padding: 50px 0px;
   color: #fff;
 }
 
 .education-container {
-  padding-top: 50px;
   width: 90%;
   margin: 0 auto;
   text-align: center;
@@ -17,19 +16,17 @@
 }
 
 .education-card {
-  background: #000;
-  border-radius: 15px;
   padding: 30px 20px;
   position: relative;
   text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
 .education-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .education-icon-container {
@@ -57,12 +54,10 @@
 }
 
 .education-details {
-  background-color: #000;
   color: #fff;
 }
 
 .education-degree {
-  background-color: #000;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -70,19 +65,16 @@
 }
 
 .education-institution {
-  background-color: #000;
   font-size: 16px;
   color: #fff
 }
 
 .education-duration {
-  background: #000;
   font-size: 14px;
   color: #fff
 }
 
 .education-place {
-  background: #000;
   font-size: 14px;
   color: #fff
 }
@@ -94,7 +86,6 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(100, 255, 218, 0.15), transparent);
   z-index: 0;
   transition: transform 0.6s ease;
   transform: scale(0);

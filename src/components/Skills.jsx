@@ -33,7 +33,7 @@ const Skills = () => {
         <h2 className="section-title">Skills</h2>
         <div className="skills-grid">
           {skillsData.map((skill, index) => (
-            <div className="skill-card" key={index}>
+            <div className="skill-card glass-card" key={index}>
               <div className="skill-icon-card">
                 <img src={skill.icon || "https://via.placeholder.com/48"} alt={`${skill.skill} icon`} className="skill-icon" />
               </div>
