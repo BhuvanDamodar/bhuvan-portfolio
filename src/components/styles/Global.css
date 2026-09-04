@@ -1,53 +1,85 @@
+:root {
+  --bg-primary: #0F1110;
+  --bg-secondary: #151917;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.065);
+  --text-primary: #ECEAE3;
+  --text-prominent: #D7DDD4;
+  --text-secondary: #ADB2AA;
+  --accent-primary: #7E9C76;
+  --accent-hover: #91AE88;
+  --border-subtle: rgba(236, 234, 227, 0.08);
+  --border-hover: rgba(126, 156, 118, 0.25);
+  --radius-btn: 8px;
+  --radius-card: 12px;
+}
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #060522;
-  color: #fff;
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 button, a {
   -webkit-tap-highlight-color: transparent;
 }
 
-button:focus, button:active {
-  background-color: transparent !important;
-  outline: none;
-  box-shadow: none;
+/* Accessible focus-visible state using --accent-primary */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }
 
-  .section-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    position: relative;
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 0; 
+  height: 2px;
+  background-color: var(--accent-primary);
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease; 
+}
+
+.section-title:hover::after {
+  width: 50px; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-  
-  .section-title::after {
-    content: "";
-    display: block;
-    width: 0; 
-    height: 3px;
-    background-color: #fff;
-    margin: 10px auto 0;
-    border-radius: 5px;
-    transition: width 0.5s ease-in-out; 
-  }
-  
-  .section-title:hover::after {
-    width: 70px; 
-  }
+}
   
   

@@ -31,30 +31,30 @@ const Home = () => {
         <p>
           I build digital dreams, one line of code at a time! From crafting seamless user experiences to engineering robust backends, I thrive on turning tech challenges into elegant solutions. Oh, and when I’m not coding, you might find me brewing ideas or coffee ☕ - sometimes both!
         </p>
-        <motion.button
-          className="explore-button"
-          onClick={handleExploreClick}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {showStory ? "Hide" : "More About Me"}
-        </motion.button>
+        <div className="hero-actions">
+          <Link to="contact" smooth={true} duration={500}>
+            <motion.button
+              className="connect-button"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Let’s Connect!
+            </motion.button>
+          </Link>
+          <motion.button
+            className="explore-button"
+            onClick={handleExploreClick}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            {showStory ? "Hide Story" : "More About Me"}
+          </motion.button>
+        </div>
         {showStory && (
           <div className="mini-bio-story">
             From Python-powered beginnings in college to mastering Java in professional projects, I’ve always found joy in solving problems - fast and efficiently. The excitement? I thrive on transforming challenges into opportunities and seeing my ideas come to life 🚀. Beyond the code, I love creating professional setups ⚙️ for my projects - a process that feels as satisfying as nailing the perfect solution. Approachable and curious, I enjoy connecting with people🤝, sharing ideas💡, and exploring creative ways to tackle challenges while learning something new every step of the way!
           </div>
         )}
-        <div className="button-container">
-          <Link to="contact" smooth={true} duration={500}>
-            <motion.button
-              className="connect-button"
-              whileHover={{ scale: 1.1, rotate: -2 }}
-              whileTap={{ scale: 0.95, rotate: 0 }}
-            >
-              Let’s Connect!
-            </motion.button>
-          </Link>
-        </div>
 
       </motion.div>
     </div>
