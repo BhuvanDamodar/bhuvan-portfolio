@@ -1,3 +1,7 @@
+/* ============================================
+   Selected Projects Section
+   ============================================ */
+
 .projects-section {
   clear: both;
   padding-top: 50px;
@@ -6,91 +10,285 @@
 .projects-container {
   position: relative;
   width: 80%;
+  max-width: 960px;
   margin: 0 auto;
   text-align: center;
   background-color: transparent;
 }
 
-.categories {
-  margin-bottom: 70px;
-}
+/* ============================================
+   Featured Project Card - Briefly.ai
+   ============================================ */
 
-.category-button {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.category-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.category-button.active {
-  background: linear-gradient(110deg, rgba(6, 5, 34, 0.8), rgba(53, 51, 205, 0.6));
-  border-color: rgba(53, 51, 205, 0.5);
-  box-shadow: 0 4px 20px rgba(53, 51, 205, 0.25);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px;
-}
-
-.project-card {
-  padding: 20px;
-  transition: transform 0.3s ease;
-  text-align: left;
-}
-
-.project-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.project-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.project-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.project-description {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.project-links {
+.featured-card {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 32px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project-links button {
-  background: linear-gradient(110deg, #060522, #3533cd);
+.featured-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
 }
+
+.featured-image-wrap {
+  flex: 0 0 40%;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+}
+
+.featured-body {
+  flex: 1;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* "Featured Project" label */
+.featured-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+}
+
+.featured-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+  line-height: 1.35;
+}
+
+.featured-dates {
+  font-size: 13px;
+  color: var(--text-prominent);
+  opacity: 0.95;
+  margin: 0 0 10px;
+}
+
+.featured-tech {
+  font-size: 12.5px;
+  color: var(--text-prominent);
+  letter-spacing: 0.2px;
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.featured-description {
+  font-size: 14.5px;
+  color: var(--text-prominent);
+  line-height: 1.65;
+  margin: 0 0 10px;
+}
+
+.featured-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.featured-highlights li {
+  font-size: 13px;
+  color: var(--text-prominent);
+  line-height: 1.55;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.featured-highlights li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  opacity: 0.7;
+}
+
+.featured-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Primary link button - green fill */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-primary);
+  color: #0F1110;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-btn);
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Secondary link button - ghost */
+.btn-secondary {
+  display: inline-block;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-btn);
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+/* Text-only button */
+.btn-text {
+  background: transparent;
+  border: none;
+  color: var(--accent-primary);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.btn-text:hover {
+  color: var(--accent-hover);
+}
+
+/* ============================================
+   Standard Project Card - Cancer Detection
+   ============================================ */
+
+.standard-card {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 32px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.standard-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.standard-image-wrap {
+  flex: 0 0 40%;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.standard-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.standard-body {
+  flex: 1;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.standard-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.standard-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.35;
+  flex: 1;
+}
+
+.academic-badge {
+  flex-shrink: 0;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent-primary);
+  border: 1px solid var(--border-hover);
+  border-radius: 4px;
+  padding: 3px 10px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.standard-dates {
+  font-size: 13px;
+  color: var(--text-prominent);
+  opacity: 0.95;
+  margin: 0 0 8px;
+}
+
+.standard-tech {
+  font-size: 12.5px;
+  color: var(--text-prominent);
+  letter-spacing: 0.2px;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.standard-description {
+  font-size: 14px;
+  color: var(--text-prominent);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================
+   Modal - Briefly.ai Detail View
+   ============================================ */
 
 .projects-modal {
   display: flex;
-  color: #fff;
+  color: var(--text-primary);
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -100,84 +298,196 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .blur-background {
-  filter: blur(5px);
-  pointer-events: none; 
+  filter: blur(4px);
+  pointer-events: none;
 }
 
 .projects-modal-content {
-  background: rgba(10, 10, 30, 0.6);
+  background: rgba(21, 25, 23, 0.98);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 30px;
-  border-radius: 16px;
-  width: 80%;
-  max-width: 780px;
+  border: 1px solid var(--border-subtle);
+  padding: 36px 34px 30px;
+  border-radius: var(--radius-card);
+  width: 88%;
+  max-width: 680px;
+  max-height: 85vh;
+  overflow-y: auto;
   position: relative;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  position: sticky;
+  top: 14px;
+  float: right;
+  margin-top: -18px;
+  margin-right: -16px;
+  font-size: 22px;
+  line-height: 1;
   cursor: pointer;
-  background-color: transparent;
+  background: rgba(21, 25, 23, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.projects-modal-description{
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.6;
+.close-button:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  transform: scale(1.06);
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+  padding-right: 28px;
+  line-height: 1.35;
+}
+
+.modal-intro {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+
+/* Grouped detail sections */
+.modal-section {
   margin-bottom: 20px;
 }
 
-.projects-modal-bullet-points{
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.modal-section:last-of-type {
+  margin-bottom: 24px;
 }
 
-.projects-modal-list{
-  margin: 10px 0;
+.modal-section-heading {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #8AAD82;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 8px;
 }
 
-.github-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #64ffda;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+.modal-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.github-link:hover {
-  background-color: #52e0c4;
+.modal-section-list li {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.65;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 5px;
 }
-  
-  @media (max-width: 768px) {
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .section-title {
-      font-size: 28px;
-    }
-  
-    .project-name {
-      font-size: 20px;
-    }
-  
-    .project-description {
-      font-size: 14px;
-    }
+
+.modal-section-list li::before {
+  content: '•';
+  position: absolute;
+  left: 2px;
+  color: #8AAD82;
+  font-size: 14px;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+  .projects-container {
+    width: 90%;
   }
+
+  .featured-card {
+    flex-direction: column;
+  }
+
+  .featured-image-wrap {
+    flex: none;
+    min-height: 180px;
+    max-height: 220px;
+  }
+
+  .featured-body {
+    padding: 22px 20px;
+  }
+
+  .featured-title {
+    font-size: 18px;
+  }
+
+  .standard-card {
+    flex-direction: column;
+  }
+
+  .standard-image-wrap {
+    flex: none;
+    min-height: 180px;
+    max-height: 220px;
+  }
+
+  .standard-body {
+    padding: 20px 18px;
+  }
+
+  .standard-title {
+    font-size: 16px;
+  }
+
+  .standard-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .academic-badge {
+    align-self: flex-start;
+  }
+
+  .projects-modal-content {
+    width: 92%;
+    padding: 26px 18px 22px;
+    max-height: 88vh;
+  }
+
+  .close-button {
+    top: 10px;
+    margin-top: -14px;
+    margin-right: -8px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+}

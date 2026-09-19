@@ -1,12 +1,22 @@
+/* ============================================
+   Hero Section - Home
+   ============================================ */
+
 .home-container {
+  /* Scope a slightly brighter accent to the hero only */
+  --hero-accent: #8AAD82;
+  --hero-accent-hover: #9AB893;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  min-height: 110vh;
-  padding: 80px 10%; 
+  min-height: 100vh;
+  padding: 80px 10% 48px;
   box-sizing: border-box;
 }
+
+/* ---- Profile Image ---- */
 
 .home-image-container {
   flex: 1;
@@ -18,137 +28,162 @@
 
 .home-image {
   width: 50%;
-  max-width: 350px;
+  max-width: 340px;
   height: auto;
-  border-radius: 60px;
+  border-radius: 36px;
   background: transparent;
   position: relative;
   margin-left: 40px;
   z-index: 1;
-  animation: imageGlow 5s infinite alternate;
-  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.65);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes imageGlow {
-  0% {
-    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
-  }
-  50% {
-    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.7);
-  }
-  100% {
-    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
-  }
+.home-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px -12px rgba(0, 0, 0, 0.75);
 }
+
+/* ---- Text Content ---- */
 
 .home-description {
   flex: 2;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
+  color: var(--text-primary);
   z-index: 1;
 }
 
-.home-description h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #fff;
+/* Greeting */
+.hero-greeting {
+  font-size: 17px;
+  color: var(--text-prominent);
+  margin: 0 0 8px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
+/* Main heading */
 .home-description h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.home-description p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #fff;
-  text-align: justify;
+  font-size: 36px;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .highlight-text {
-  background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--hero-accent);
+  font-weight: 700;
 }
 
-.explore-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: linear-gradient(110deg, #060522, #3533cd);
-  color: #fff;
+/* Professional intro paragraph */
+.hero-intro {
   font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
+  line-height: 1.7;
+  color: var(--text-prominent);
+  margin: 0 0 12px;
+  max-width: 620px;
 }
 
-.explore-button:hover {
-  transform: scale(1.1);
-  background-color: #4a47a3;
-}
-
-.mini-bio-story {
-  margin-top: 20px;
-  padding: 15px;
-  color: #fff;
-  font-size: 16px;
+/* Personal touch line */
+.hero-personal {
+  font-size: 14px;
   line-height: 1.6;
-  border-radius: 10px;
-  animation: fadeIn 0.5s ease-in-out;
-  text-align: justify;
-  font-family: 'Arial', sans-serif;
+  color: var(--text-secondary);
+  opacity: 0.95;
+  margin: 0 0 24px;
+  max-width: 540px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* ---- CTA Buttons ---- */
 
-.connect-button {
-  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-  color: white;
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
-  border: none;
-  border-radius: 30px;
-  padding: 12px 24px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.connect-button:hover {
-  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.connect-button:active {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.button-container {
+.hero-actions {
   display: flex;
-  justify-content: center;
-  margin-top: 60px;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
+
+/* Primary CTA - View Projects */
+.hero-cta-primary {
+  background-color: var(--hero-accent);
+  color: #0F1110;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-btn);
+  padding: 11px 26px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-cta-primary:hover {
+  background-color: var(--hero-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.hero-cta-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Secondary CTA - Download CV */
+.hero-cta-secondary {
+  padding: 10px 22px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-cta-secondary:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+/* Remove default anchor underline around CV button */
+.hero-actions a {
+  text-decoration: none;
+}
+
+/* ---- Professional Context Row ---- */
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  opacity: 0.92;
+  line-height: 1.5;
+}
+
+.hero-meta-sep {
+  color: var(--hero-accent);
+  opacity: 0.8;
+  margin: 0 2px;
+}
+
+/* ============================================
+   Responsive - Tablet / Mobile
+   ============================================ */
 
 @media (max-width: 1200px) {
   .home-container {
-    padding-top: 22vh;
+    padding-top: 120px;
     flex-direction: column;
-    gap: 50px;
+    gap: 32px;
     align-items: center;
   }
 
@@ -157,19 +192,33 @@
   }
 
   .home-image {
-    max-width: 300px;
-    margin-left: 0px;
+    max-width: 260px;
+    margin-left: 0;
   }
 
-  .home-description h2 {
-    font-size: 28px;
+  .home-description {
+    text-align: center;
   }
 
   .home-description h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
-  .home-description p {
-    font-size: 16px;
+  .hero-intro {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .hero-personal {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-meta-row {
+    justify-content: center;
   }
 }

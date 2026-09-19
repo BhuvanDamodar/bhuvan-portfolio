@@ -9,9 +9,9 @@ import sparks from '../resources/photos/sparks.png';
 const experiences = [
   { 
     position: 'Working Student - Future Digital Engineering',
-    company: 'Mercedes Benz AG',
+    company: 'Mercedes-Benz AG',
     duration: 'February 2026 - Present',
-    description: 'Contributing to the Future Digital Engineering team at Mercedes‑Benz by developing Python-based services that power internal GUI tools and enhance engineering workflows.',
+    description: 'Developing and enhancing Python-based engineering tools while supporting research on ML surrogate models for finite-element (FEM) crash simulations. Working with mesh-based simulation data, geometry and physics-related features, and exploring graph-based and geometric deep-learning approaches for efficient simulation prediction.',
     image: mb
   },
   { 

@@ -1,16 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import './styles/Home.css';
 import myPicture from '../resources/photos/bhuvan_photo.png';
 
 const Home = () => {
-  const [showStory, setShowStory] = useState(false);
-
-  const handleExploreClick = () => {
-    setShowStory(!showStory);
-  };
-
   return (
     <div id="home" className="home-container">
       <motion.div
@@ -27,35 +21,53 @@ const Home = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h2>👋 Hello World! I’m <span className="highlight-text">Bhuvan</span>, Your Friendly Tech Enthusiast.</h2>
-        <p>
-          I build digital dreams, one line of code at a time! From crafting seamless user experiences to engineering robust backends, I thrive on turning tech challenges into elegant solutions. Oh, and when I’m not coding, you might find me brewing ideas or coffee ☕ - sometimes both!
+        <p className="hero-greeting">👋 Hi, I'm Bhuvan.</p>
+        <h1>
+          Software Engineer building{' '}
+          <span className="highlight-text">Backend, ML &amp; GenAI</span> Systems
+        </h1>
+        <p className="hero-intro">
+          M.Sc. Computer Science student at the University of Stuttgart with 3+ years
+          of professional software engineering experience across backend systems,
+          automation and applied AI. Currently working at Mercedes-Benz on
+          machine-learning methods for engineering simulation.
         </p>
-        <motion.button
-          className="explore-button"
-          onClick={handleExploreClick}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {showStory ? "Hide" : "More About Me"}
-        </motion.button>
-        {showStory && (
-          <div className="mini-bio-story">
-            From Python-powered beginnings in college to mastering Java in professional projects, I’ve always found joy in solving problems - fast and efficiently. The excitement? I thrive on transforming challenges into opportunities and seeing my ideas come to life 🚀. Beyond the code, I love creating professional setups ⚙️ for my projects - a process that feels as satisfying as nailing the perfect solution. Approachable and curious, I enjoy connecting with people🤝, sharing ideas💡, and exploring creative ways to tackle challenges while learning something new every step of the way!
-          </div>
-        )}
-        <div className="button-container">
-          <Link to="contact" smooth={true} duration={500}>
+        <p className="hero-personal">
+          I enjoy turning complex engineering problems into reliable software 
+          and occasionally into side projects that get a little out of hand.
+        </p>
+        <div className="hero-actions">
+          <Link to="projects" smooth={true} duration={500} offset={-100}>
             <motion.button
-              className="connect-button"
-              whileHover={{ scale: 1.1, rotate: -2 }}
-              whileTap={{ scale: 0.95, rotate: 0 }}
+              className="hero-cta-primary"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
             >
-              Let’s Connect!
+              View Projects
             </motion.button>
           </Link>
+          <a
+            href="/Bhuvan_Damodar_Anand_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <motion.button
+              className="hero-cta-secondary"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Download CV
+            </motion.button>
+          </a>
         </div>
-
+        <div className="hero-meta-row">
+          <span>3+ Years Software Engineering</span>
+          <span className="hero-meta-sep" aria-hidden="true">|</span>
+          <span>Applied ML @ Mercedes-Benz</span>
+          <span className="hero-meta-sep" aria-hidden="true">|</span>
+          <span>M.Sc. @ University of Stuttgart</span>
+        </div>
       </motion.div>
     </div>
   );
