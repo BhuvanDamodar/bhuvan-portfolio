@@ -6,14 +6,15 @@ const educationData = [
   {
     degree: "Master of Science in Computer Science",
     institution: "University of Stuttgart",
-    duration: "2025 - Present",
     place: "Stuttgart, Germany",
+    duration: "2025 – Present",
+    focus: "Focus: Software Engineering, Applied AI & Machine Learning",
   },
   {
     degree: "Bachelor of Engineering in Computer Science",
-    institution: "Vidya Vardhaka College of Engineering",
-    duration: "2018 - 2022",
+    institution: "Vidyavardhaka College of Engineering",
     place: "Mysore, India",
+    duration: "2018 – 2022",
   },
 ];
 
@@ -33,6 +34,9 @@ const Education = () => {
                 <p className="education-institution">{education.institution}</p>
                 <p className="education-place">{education.place}</p>
                 <p className="education-duration">{education.duration}</p>
+                {education.focus && (
+                  <p className="education-focus">{education.focus}</p>
+                )}
               </div>
             </div>
           ))}

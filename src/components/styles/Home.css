@@ -1,12 +1,22 @@
+/* ============================================
+   Hero Section - Home
+   ============================================ */
+
 .home-container {
+  /* Scope a slightly brighter accent to the hero only */
+  --hero-accent: #8AAD82;
+  --hero-accent-hover: #9AB893;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  min-height: 85vh;
-  padding: 100px 10% 40px; 
+  min-height: 100vh;
+  padding: 80px 10% 48px;
   box-sizing: border-box;
 }
+
+/* ---- Profile Image ---- */
 
 .home-image-container {
   flex: 1;
@@ -35,48 +45,69 @@
   box-shadow: 0 20px 42px -12px rgba(0, 0, 0, 0.75);
 }
 
+/* ---- Text Content ---- */
+
 .home-description {
   flex: 2;
   color: var(--text-primary);
   z-index: 1;
 }
 
-.home-description h2 {
-  font-size: 34px;
-  margin-bottom: 18px;
+/* Greeting */
+.hero-greeting {
+  font-size: 17px;
+  color: var(--text-prominent);
+  margin: 0 0 8px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Main heading */
+.home-description h1 {
+  font-size: 36px;
+  line-height: 1.25;
+  margin: 0 0 20px;
   color: var(--text-primary);
   font-weight: 700;
-}
-
-.home-description h1 {
-  font-size: 38px;
-  margin-bottom: 18px;
-  color: var(--text-primary);
-}
-
-.home-description p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  text-align: justify;
-  margin-bottom: 0;
 }
 
 .highlight-text {
-  color: #7E9C76;
+  color: var(--hero-accent);
   font-weight: 700;
 }
+
+/* Professional intro paragraph */
+.hero-intro {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-prominent);
+  margin: 0 0 12px;
+  max-width: 620px;
+}
+
+/* Personal touch line */
+.hero-personal {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  opacity: 0.95;
+  margin: 0 0 24px;
+  max-width: 540px;
+}
+
+/* ---- CTA Buttons ---- */
 
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 24px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
 }
 
-.connect-button {
-  background-color: var(--accent-primary);
+/* Primary CTA - View Projects */
+.hero-cta-primary {
+  background-color: var(--hero-accent);
   color: #0F1110;
   font-size: 15px;
   font-weight: 600;
@@ -88,18 +119,19 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
-.connect-button:hover {
-  background-color: var(--accent-hover);
+.hero-cta-primary:hover {
+  background-color: var(--hero-accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
-.connect-button:active {
+.hero-cta-primary:active {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-.explore-button {
+/* Secondary CTA - Download CV */
+.hero-cta-secondary {
   padding: 10px 22px;
   background: var(--surface);
   color: var(--text-primary);
@@ -113,41 +145,45 @@
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.explore-button:hover {
+.hero-cta-secondary:hover {
   background-color: var(--surface-hover);
   border-color: var(--border-hover);
   transform: translateY(-2px);
 }
 
-.mini-bio-story {
-  margin-top: 20px;
-  padding: 18px 20px;
-  color: var(--text-secondary);
-  background: var(--surface);
-  border: 1px solid var(--border-subtle);
-  font-size: 15px;
-  line-height: 1.7;
-  border-radius: var(--radius-card);
-  animation: fadeIn 0.4s ease-in-out;
-  text-align: justify;
+/* Remove default anchor underline around CV button */
+.hero-actions a {
+  text-decoration: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ---- Professional Context Row ---- */
+
+.hero-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  opacity: 0.92;
+  line-height: 1.5;
 }
+
+.hero-meta-sep {
+  color: var(--hero-accent);
+  opacity: 0.8;
+  margin: 0 2px;
+}
+
+/* ============================================
+   Responsive - Tablet / Mobile
+   ============================================ */
 
 @media (max-width: 1200px) {
   .home-container {
     padding-top: 120px;
     flex-direction: column;
-    gap: 36px;
+    gap: 32px;
     align-items: center;
   }
 
@@ -156,23 +192,33 @@
   }
 
   .home-image {
-    max-width: 280px;
-    margin-left: 0px;
+    max-width: 260px;
+    margin-left: 0;
   }
 
-  .home-description h2 {
-    font-size: 28px;
+  .home-description {
+    text-align: center;
   }
 
   .home-description h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
-  .home-description p {
+  .hero-intro {
     font-size: 15px;
+    max-width: 100%;
+  }
+
+  .hero-personal {
+    font-size: 13px;
+    max-width: 100%;
   }
 
   .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-meta-row {
     justify-content: center;
   }
 }

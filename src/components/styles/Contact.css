@@ -1,69 +1,95 @@
+/* ============================================
+   Contact Section - Professional & Recruiter-Friendly
+   ============================================ */
+
 .contact-container {
-  padding-top: 20px;
+  padding: 90px 0;
 }
 
 .contact-section {
-  padding: 36px 30px;
-  max-width: 600px;
+  padding: 36px 32px;
+  max-width: 520px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 15vh;
 }
 
 .contact-title {
-  background-color: transparent;
-  font-size: 32px;
+  font-size: 28px;
   color: var(--text-primary);
-  margin-bottom: 30px;
+  margin: 0 0 8px 0;
   font-weight: 700;
 }
 
+.contact-subtitle {
+  font-size: 14px;
+  color: var(--text-prominent);
+  margin: 0 auto 24px auto;
+  line-height: 1.5;
+  max-width: 440px;
+}
+
 .contact-form {
-  background-color: transparent;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  text-align: left;
 }
 
-.input-group {
-  background-color: transparent;
+.form-field {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.input-group input {
-  width: 100%;
+.field-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-prominent);
 }
 
-input, textarea {
+/* Honeypot field completely hidden from human visitors */
+.honeypot-field {
+  display: none !important;
+  opacity: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.contact-form input,
+.contact-form textarea {
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   width: 100%;
-  padding: 12px 14px;
+  padding: 11px 14px;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-btn);
   color: var(--text-primary);
-  font-size: 15px;
+  font-size: 14.5px;
   font-family: inherit;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-sizing: border-box;
 }
 
-input:focus, textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   background: rgba(0, 0, 0, 0.4);
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 1px rgba(101, 168, 149, 0.3);
+  box-shadow: 0 0 0 1px rgba(126, 156, 118, 0.35);
   outline: none;
 }
 
-textarea {
-  height: 120px;
-  resize: none;
+.contact-form textarea {
+  height: 110px;
+  min-height: 85px;
+  resize: vertical;
 }
 
-input::placeholder, textarea::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
   color: var(--text-secondary);
+  opacity: 0.75;
 }
 
 .send-button {
@@ -77,16 +103,23 @@ input::placeholder, textarea::placeholder {
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  margin-top: 6px;
+  width: 100%;
 }
 
-.send-button:hover {
+.send-button:hover:not(:disabled) {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
-.send-button:active {
+.send-button:active:not(:disabled) {
   transform: translateY(0);
+}
+
+.send-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 .error-input {
@@ -97,9 +130,10 @@ input::placeholder, textarea::placeholder {
   font-size: 12px;
   color: #E06C75;
   text-align: left;
-  margin-top: -14px;
+  margin-top: 2px;
 }
 
+/* Modal */
 .contact-modal-overlay {
   position: fixed;
   top: 0;
@@ -122,7 +156,7 @@ input::placeholder, textarea::placeholder {
   text-align: center;
   width: 320px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 0.3s ease-out;
+  animation: contactFadeIn 0.3s ease-out;
 }
 
 .contact-modal-content h3 {
@@ -132,7 +166,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .contact-modal-content p {
-  color: var(--text-secondary);
+  color: var(--text-prominent);
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -155,11 +189,34 @@ input::placeholder, textarea::placeholder {
   transform: translateY(-1px);
 }
 
-@keyframes fadeIn {
+@keyframes contactFadeIn {
   from {
     opacity: 0;
+    transform: scale(0.96);
   }
+
   to {
     opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 100px 0;
+  }
+
+  .contact-section {
+    padding: 26px 20px;
+    margin: 0 16px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-subtitle {
+    font-size: 13.5px;
+    margin-bottom: 20px;
   }
 }

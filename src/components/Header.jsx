@@ -1,11 +1,11 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import './styles/Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () =>{
+  const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   }
 
@@ -17,7 +17,7 @@ const Header = () => {
     <header>
       <nav className="navbar">
         <div className="logo">
-          <h1><Link to = "home" smooth={true} duration={500}>BHUVAN.</Link></h1>
+          <h1><Link to="home" smooth={true} duration={500}>BHUVAN.</Link></h1>
         </div>
 
         {/* Hamburger Icon for Mobile */}
@@ -27,16 +27,11 @@ const Header = () => {
           <span className="bar"></span>
         </div>
 
-        <ul className={`nav-links ${menuOpen ? 'open': ''}`}>
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li className="close-btn" onClick={closeMenu}>✕</li>
           <li>
             <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="home" smooth={true} duration={500}>
               <button>Home</button>
-            </Link>
-          </li>
-          <li>
-            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="projects" smooth={true} duration={500}>
-              <button>Projects</button>            
             </Link>
           </li>
           <li>
@@ -45,18 +40,23 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="projects" smooth={true} duration={500}>
+              <button>Projects</button>
+            </Link>
+          </li>
+          <li>
+            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="skills" smooth={true} duration={500}>
+              <button>Skills</button>
+            </Link>
+          </li>
+          <li>
             <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="education" smooth={true} duration={500}>
               <button>Education</button>
             </Link>
           </li>
           <li>
-            <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="skills" smooth={true} duration={500}>
-              <button>Skills</button>          
-            </Link>
-          </li>
-          <li>
             <Link activeClass="active" spy={true} offset={-100} className="link" onClick={closeMenu} to="contact" smooth={true} duration={500}>
-              <button>Contact</button>           
+              <button>Contact</button>
             </Link>
           </li>
         </ul>

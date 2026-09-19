@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=36&duration=3000&pause=1000&color=6C63FF&center=true&vCenter=true&width=600&lines=Bhuvan+Damodar+Anand;Software+Engineer;AI/ML+Enthusiast" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=32&duration=3000&pause=1000&color=8AAD82&center=true&vCenter=true&width=650&lines=Bhuvan+Damodar+Anand;Software+Engineer;Backend%2C+ML+%26+GenAI+Systems" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -12,9 +12,11 @@
 
 ## About
 
-A modern, single-page portfolio website built with **React 18** - showcasing my projects, professional experience, education, and technical skills. The interface features a **glassmorphism** design system, smooth **Framer Motion** animations, and a fully functional **EmailJS**-powered contact form - all wrapped in a responsive layout that looks great on any device.
+A modern, high-performance developer portfolio website built with **React 18** - showcasing professional engineering experience, applied AI research, and production-grade full-stack projects. 
 
-> **Live Site →** https://bhuvandamodar-portfolio.vercel.app
+Designed around an elegant dark sage glassmorphism design system with high-contrast typography, **Framer Motion** micro-interactions, an **EmailJS**-integrated contact form with honeypot spam protection, and responsive mobile navigation with tuned scroll-spying.
+
+> **Live Site →** [bhuvandamodar-portfolio.vercel.app](https://bhuvandamodar-portfolio.vercel.app)
 
 ---
 
@@ -22,20 +24,21 @@ A modern, single-page portfolio website built with **React 18** - showcasing my 
 
 | Section | Highlights |
 |---------|-----------|
-| **Home** | Animated hero with profile photo, expandable "About Me" bio, and smooth-scroll CTA |
-| **Projects** | Filterable project grid (Machine Learning · Web Development) with detail modals and GitHub links |
-| **Experience** | Interactive timeline with alternating layout, slide-in animations, and company logos |
-| **Education** | Academic background section with relevant coursework |
-| **Skills** | Visual skill cards with proficiency levels and CDN-sourced icons |
-| **Contact** | Client-side validated form powered by **EmailJS** with success modal feedback |
-| **Navigation** | Sticky navbar with smooth scrolling via React Scroll + responsive hamburger menu |
+| **Home** | Bold hero introducing backend, ML & GenAI focus, quick summary badges, and direct CTAs (*View Projects* & *Download CV*) |
+| **Experience** | Interactive alternating timeline detailing roles at **Mercedes-Benz** (Applied ML / Engineering Simulation), **Happiest Minds Technologies** (Software Engineer → Senior Software Engineer), Shiash Info Solutions, and The Sparks Foundation |
+| **Projects** | Curated project showcase headlined by **Briefly.ai** (GenAI News Intelligence & RAG Platform with live demo, benchmarks, and interactive detail modal) and cancer histopathology deep learning research (0.94 ROC-AUC) |
+| **Skills** | Categorized skill matrix (Languages, Backend & Systems, ML & GenAI, Cloud & DevOps, Databases, Frontend, Engineering Practices) and additional technologies bar |
+| **Education** | Academic background detailing **M.Sc. Computer Science** at the University of Stuttgart and **B.E. Computer Science** at VVCE |
+| **Contact** | Glassmorphism contact form with client-side validation, bot-deterrent honeypot, and seamless **EmailJS** integration |
+| **Navigation** | Sticky glassmorphism header with active link scroll-spying via `react-scroll`, smooth offset targeting, and a responsive mobile drawer menu |
 
-### Design & UX
+### Design System & UX
 
-- 🎨 **Glassmorphism UI** - frosted-glass card effect across all sections
-- 🎞️ **Framer Motion Animations** - fade-ins, scale transitions, hover/tap micro-interactions
-- 📱 **Fully Responsive** - optimized for mobile, tablet, and desktop viewports
-- 🔤 **Google Fonts** - clean typography using Open Sans
+- 🌿 **Curated Dark Sage Palette** - High-contrast design using tailored tokens (`#0F1110`, `#F7F7F4`, `#E8ECE6`, `#8AAD82`) engineered for effortless readability at a glance.
+- 🪟 **Frosted Glassmorphism** - Layered surfaces with `backdrop-filter: blur()`, subtle border treatments, and deep ambient box shadows.
+- 🎞️ **Fluid Framer Motion Animations** - Coordinated entrance transitions, interactive card hover lift, and tactile button presses.
+- 📱 **Fully Responsive** - Thoughtfully adapted layouts across mobile, tablet, and high-resolution desktop viewports.
+- ♿ **Accessibility & Motion Preferences** - Clear focus-visible outlines and `prefers-reduced-motion` fallbacks.
 
 ---
 
@@ -43,14 +46,14 @@ A modern, single-page portfolio website built with **React 18** - showcasing my 
 
 | Layer | Technology |
 |-------|-----------|
-| **Framework** | React 18 (Create React App) |
-| **Animations** | Framer Motion |
-| **Navigation** | React Scroll |
-| **Icons** | React Icons + Simple Icons CDN |
-| **Email** | EmailJS |
-| **Analytics** | Vercel Analytics |
-| **Styling** | Vanilla CSS with glassmorphism variables |
-| **Fonts** | Google Fonts (Open Sans) |
+| **Frontend Framework** | React 18 (Create React App) |
+| **Motion & Micro-interactions** | Framer Motion |
+| **Smooth Navigation** | React Scroll (with offset-tuned scrollspy) |
+| **Icons** | React Icons (`fa`, `si`, `vsc`) |
+| **Email Service** | EmailJS |
+| **Telemetry & Analytics** | Vercel Analytics |
+| **Styling** | Vanilla CSS Design Tokens & Scoped Modules |
+| **Typography** | Google Fonts (Orbitron & System Sans) |
 
 ---
 
@@ -59,26 +62,36 @@ A modern, single-page portfolio website built with **React 18** - showcasing my 
 ```
 bhuvan-portfolio/
 ├── public/
-│   ├── index.html            # HTML template & meta tags
+│   ├── Bhuvan_Damodar_Anand_CV.pdf   # Direct download resume
+│   ├── index.html                    # HTML template & SEO meta tags
 │   ├── favicon.ico
 │   └── manifest.json
 ├── src/
-│   ├── App.js                # Root component - section composition
-│   ├── index.js              # React DOM entry point
-│   ├── index.css             # Global reset & base styles
+│   ├── App.js                        # Root component & section orchestration
+│   ├── index.js                      # React DOM root render
+│   ├── index.css                     # Global resets & font definitions
 │   ├── components/
-│   │   ├── Header.jsx        # Sticky navbar + hamburger menu
-│   │   ├── Home.jsx          # Hero section with expandable bio
-│   │   ├── Projects.jsx      # Filterable project grid + modals
-│   │   ├── Experience.jsx    # Animated timeline
-│   │   ├── Education.jsx     # Academic background
-│   │   ├── Skills.jsx        # Skill cards with proficiency
-│   │   ├── Contact.jsx       # EmailJS contact form
-│   │   ├── Footer.jsx        # Footer links & credits
-│   │   └── styles/           # Component-scoped CSS modules
+│   │   ├── Header.jsx                # Sticky navbar + mobile hamburger drawer
+│   │   ├── Home.jsx                  # Hero section with avatar & quick credentials
+│   │   ├── Experience.jsx            # Chronological career timeline
+│   │   ├── Projects.jsx              # Featured & standard projects + detail modal
+│   │   ├── Skills.jsx                # Categorized tech grid & additional stack bar
+│   │   ├── Education.jsx             # Degrees & specialization highlights
+│   │   ├── Contact.jsx               # Contact form with validation & EmailJS
+│   │   ├── Footer.jsx                # Social links, direct mail, and copyright
+│   │   └── styles/                   # Modular CSS stylesheets
+│   │       ├── Global.css            # Root design tokens & global variables
+│   │       ├── Header.css
+│   │       ├── Home.css
+│   │       ├── Experience.css
+│   │       ├── Projects.css
+│   │       ├── Skills.css
+│   │       ├── Education.css
+│   │       ├── Contact.css
+│   │       └── Footer.css
 │   └── resources/
-│       └── photos/           # Profile & project images
-├── .env                      # EmailJS credentials (not committed)
+│       └── photos/                   # Screenshots & profile media
+├── .env                              # EmailJS credentials (kept local)
 ├── package.json
 └── README.md
 ```
@@ -95,7 +108,7 @@ bhuvan-portfolio/
 ### Installation
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/BhuvanDamodar/bhuvan-portfolio.git
 cd bhuvan-portfolio
 
@@ -105,7 +118,7 @@ npm install
 
 ### Environment Variables
 
-Create a `.env` file in the project root with your [EmailJS](https://www.emailjs.com/) credentials:
+Create a `.env` file in the project root with your [EmailJS](https://www.emailjs.com/) configuration:
 
 ```env
 REACT_APP_EMAILJS_SERVICE_ID=your_service_id
@@ -119,7 +132,7 @@ REACT_APP_EMAILJS_USER_ID=your_user_id
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app in your browser. The page will hot-reload on changes.
+Runs the application locally at [http://localhost:3000](http://localhost:3000) with hot reload.
 
 ### Production Build
 
@@ -127,19 +140,18 @@ Open [http://localhost:3000](http://localhost:3000) to view the app in your brow
 npm run build
 ```
 
-Generates an optimized production bundle in the `build/` directory.
+Creates an optimized production bundle in the `build/` directory ready for deployment.
 
 ---
 
 ## 🌐 Deployment
 
-This project is optimized for **Vercel** (one-click deploy):
+This project is deployed and hosted on **Vercel** with continuous deployment on Git pushes:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BhuvanDamodar/bhuvan-portfolio)
 
 ---
 
-
 <p align="center">
-  <sub>Designed & built by <strong>Bhuvan Damodar Anand</strong></sub>
+  <sub>Designed &amp; built by <strong>Bhuvan Damodar Anand</strong></sub>
 </p>

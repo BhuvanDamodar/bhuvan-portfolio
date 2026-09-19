@@ -9,23 +9,36 @@ const Footer = () => {
         <div className="footer-content">
           <p className="footer-name">Bhuvan Damodar Anand</p>
           <p className="footer-contact">
-            <FaEnvelope/> <a href="mailto:bhuvandamodar04@gmail.com" target="_blank" rel="noopener noreferrer">bhuvandamodar04@gmail.com</a>
+            <FaEnvelope className="footer-email-icon" />{' '}
+            <a href="mailto:bhuvandamodar04@gmail.com" target="_blank" rel="noopener noreferrer">
+              bhuvandamodar04@gmail.com
+            </a>
           </p>
           <ul className="footer-socials">
             <li>
-              <a href="https://www.linkedin.com/in/bhuvan-damodar-anand-657b95179" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FaLinkedin size={26} />
+              <a
+                href="https://www.linkedin.com/in/bhuvan-damodar-anand-657b95179"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={21} />
               </a>
             </li>
             <li>
-              <a href="https://github.com/BhuvanDamodar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <FaGithub size={26} />
+              <a
+                href="https://github.com/BhuvanDamodar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub size={21} />
               </a>
             </li>
           </ul>
         </div>
         <p className="footer-copyright">
-          &copy; {new Date().getFullYear()} Bhuvan Portfolio. All rights reserved.
+          &copy; {new Date().getFullYear()} Bhuvan Damodar Anand. All rights reserved.
         </p>
       </div>
     </footer>

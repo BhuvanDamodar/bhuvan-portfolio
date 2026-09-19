@@ -13,11 +13,11 @@ function App() {
   return (
     <div>
       <Header/>
-      <Home/>      
-      <Projects/>
+      <Home/>
       <Experience/>
-      <Education/>
+      <Projects/>
       <Skills/>
+      <Education/>
       <Contact/>
       <Footer/>
       <Analytics/>

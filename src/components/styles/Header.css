@@ -66,7 +66,7 @@ header {
 
 .close-btn {
   font-size: 24px;
-  color: var(--text-secondary);
+  color: var(--text-prominent);
   cursor: pointer;
   align-self: flex-end;
   margin-bottom: 24px;
@@ -79,7 +79,7 @@ header {
 
 .nav-links button {
   background: transparent;
-  color: var(--text-secondary);
+  color: var(--text-prominent);
   padding: 6px 10px;
   font-size: 15px;
   font-weight: 400;

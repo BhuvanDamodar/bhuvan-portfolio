@@ -75,13 +75,21 @@
 
 .education-place {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--text-prominent);
   margin-bottom: 4px;
 }
 
 .education-duration {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--text-prominent);
+}
+
+.education-focus {
+  font-size: 13px;
+  color: var(--text-prominent);
+  margin: 8px 0 0 0;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,10 @@
+/* ============================================
+   Footer Section - Minimal & Polished
+   ============================================ */
+
 .footer-section {
-  margin-top: 10vh;
-  padding: 30px 0 24px;
+  margin-top: 40px;
+  padding: 28px 0 24px;
   color: var(--text-primary);
   text-align: center;
   background: var(--bg-secondary);
@@ -9,6 +13,7 @@
 
 .footer-container {
   width: 80%;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -22,10 +27,10 @@
 }
 
 .footer-name {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px 0;
   color: var(--text-primary);
 }
 
@@ -33,20 +38,18 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 15px;
-  color: var(--text-secondary);
-  text-decoration: none;
+  font-size: 14px;
+  color: var(--text-prominent);
+  margin: 0 0 14px 0;
   transition: color 0.2s ease;
-  margin-bottom: 16px;
 }
 
 .footer-contact:hover {
   color: var(--accent-primary);
 }
 
-.footer-contact svg {
-  width: 16px;
-  height: 16px;
+.footer-email-icon {
+  font-size: 14px;
 }
 
 .footer-contact a {
@@ -60,14 +63,21 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 10px;
+  gap: 18px;
+  margin: 0 0 10px 0;
+}
+
+.footer-socials li {
+  display: flex;
+  align-items: center;
 }
 
 .footer-socials a {
-  color: var(--text-secondary);
+  color: var(--text-prominent);
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -77,19 +87,28 @@
 }
 
 .footer-copyright {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--text-secondary);
-  opacity: 0.7;
-  margin-top: 10px;
-  letter-spacing: 0.5px;
+  opacity: 0.9;
+  margin: 8px 0 0 0;
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 768px) {
+  .footer-section {
+    margin-top: 32px;
+    padding: 24px 0 20px;
+  }
+
   .footer-container {
     width: 90%;
   }
 
   .footer-name {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .footer-contact {
+    font-size: 13.5px;
   }
 }
